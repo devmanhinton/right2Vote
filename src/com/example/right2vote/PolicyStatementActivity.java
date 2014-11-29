@@ -93,8 +93,18 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 	
 	public String calculateWinner(){
-		/* Stubbed out for now */
-		return "Clinton";
+		int hilary = 0;
+		int ted = 0;
+		
+		for (int i = 0; i<this.statements.length; i++){
+			if (this.statements[i].isFor() == PolicyStatement.HILARY) {
+				hilary +=1;
+			} else {
+				ted +=1;
+			}
+		}
+		
+		return ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY; /* Tie goes to Hilary :) */
 	}
 	
 	private boolean isFinished(){

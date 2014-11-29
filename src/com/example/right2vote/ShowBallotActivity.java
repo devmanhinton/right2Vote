@@ -37,7 +37,6 @@ public class ShowBallotActivity extends NavigationActivity {
 		LinearLayout cruzBox = (LinearLayout) findViewById(R.id.cruzBox);
 		
 		for (int i=0; i < this.statements.length; i++){
-			System.out.println("DEVON IS HERE BITHES!");
 			PolicyStatement statement = statements[i];
 			String policyArea = statement.getPolicyArea();
 			

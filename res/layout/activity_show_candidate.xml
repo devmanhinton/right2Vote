@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,18 +11,48 @@
 
     <TextView
         android:id="@+id/winner"
-        android:text="@string/home_button"
+        android:text="@string/winningCandidateTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    />
+        android:layout_height="wrap_content" />
+    
+    <LinearLayout android:visibility="gone" android:id="@+id/hilaryBox" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">
+		<ImageView
+			android:id="@+id/hiliaryImage"
+			android:src="@drawable/hiliary_clinton"
+			android:adjustViewBounds="true"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:layout_marginBottom="10dp"
+			android:contentDescription="@string/image_desc" />   
+	    <TextView
+	        android:id="@+id/hilaryText"
+	        android:text="@string/hilaryChosenText"
+	        android:gravity="center"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"/>      
+    </LinearLayout>
+    <LinearLayout android:visibility="gone" android:id="@+id/cruzBox" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">        
+		<ImageView
+			android:id="@+id/cruzImage"
+			android:src="@drawable/ted_cruz"
+			android:adjustViewBounds="true"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:layout_marginBottom="10dp"
+			android:contentDescription="@string/image_desc" />
+	    <TextView
+	        android:id="@+id/cruzText"
+	        android:text="@string/cruzChosenText"
+	        android:gravity="center"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"/>     
+    </LinearLayout>
     
     <Button
 	    android:onClick="goHome"
 	    android:id="@+id/homeButton"
 	    android:text="@string/home_button"
 	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content"
-    />
+	    android:layout_width="wrap_content" />
     
-    
-</RelativeLayout>
+</LinearLayout>

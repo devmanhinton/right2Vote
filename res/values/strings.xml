@@ -25,5 +25,8 @@
     <string name="title_activity_ballot">BallotActivity</string>
     <string name="still_statements">Once you rank issues we will have the data to give you your results!</string>
     <string name="issues_button">Rank Issues</string>
+    <string name="winningCandidateTitle">Your Match</string>
+    <string name="hilaryChosenText">Hilary Clinton is</string>
+    <string name="cruzChosenText">Ted Cruz is</string>
     
 </resources>

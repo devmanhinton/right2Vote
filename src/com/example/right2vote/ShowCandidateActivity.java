@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.right2vote.NavigationActivity;
+import com.example.right2vote.PolicyStatement;
+
 
 public class ShowCandidateActivity extends NavigationActivity {
 
@@ -16,11 +19,16 @@ public class ShowCandidateActivity extends NavigationActivity {
 		setContentView(R.layout.activity_show_candidate);
 		
 		Bundle extras = getIntent().getExtras();
+		String winner = extras.getString("winner");
+		LinearLayout layout;
 		
-		TextView textView = (TextView) findViewById(R.id.winner);
+		if (winner.equals(PolicyStatement.HILARY)) {
+			layout = (LinearLayout) findViewById(R.id.hilaryBox);
+		} else {
+			layout = (LinearLayout) findViewById(R.id.cruzBox);
+		}
 		
-		textView.setTextSize(15);
-		textView.setText(extras.getString("winner"));
+		layout.setVisibility(View.VISIBLE);
 	}
 
 	@Override
