@@ -16,8 +16,9 @@
 	    <TextView
 	        android:id="@+id/policyStatement"
 	        android:text="@string/hello_world"
+	        android:gravity="center"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"/>
+	        android:layout_height="match_parent"/>
 	</LinearLayout>
         
     <LinearLayout android:layout_weight="2.0"
