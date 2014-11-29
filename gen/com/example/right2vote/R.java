@@ -36,29 +36,31 @@ public final class R {
         public static final int voter=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f080016;
+        public static final int action_settings=0x7f080018;
         public static final int agree=0x7f080009;
-        public static final int cruzImage=0x7f080010;
+        public static final int cruzBox=0x7f080011;
+        public static final int cruzImage=0x7f080012;
         public static final int disagree=0x7f08000a;
         public static final int finished=0x7f08000e;
-        public static final int hiliaryImage=0x7f08000f;
+        public static final int hilaryBox=0x7f08000f;
+        public static final int hiliaryImage=0x7f080010;
         public static final int homeButton=0x7f08000b;
         public static final int image1=0x7f080001;
         public static final int image2=0x7f080003;
         public static final int image3=0x7f080005;
         public static final int image4=0x7f080007;
         public static final int issuesButton=0x7f08000d;
-        public static final int logisticsDate=0x7f080013;
-        public static final int logisticsDateLabel=0x7f080012;
-        public static final int logisticsMap=0x7f080015;
-        public static final int logisticsMapLabel=0x7f080014;
+        public static final int logisticsDate=0x7f080015;
+        public static final int logisticsDateLabel=0x7f080014;
+        public static final int logisticsMap=0x7f080017;
+        public static final int logisticsMapLabel=0x7f080016;
         public static final int notFinished=0x7f08000c;
         public static final int policyStatement=0x7f080008;
         public static final int textIssues=0x7f080000;
         public static final int textLogistics=0x7f080004;
         public static final int textMyBallot=0x7f080002;
         public static final int textShare=0x7f080006;
-        public static final int winner=0x7f080011;
+        public static final int winner=0x7f080013;
     }
     public static final class layout {
         public static final int activity_ballot=0x7f030000;

@@ -33,7 +33,7 @@
 	    android:layout_height="wrap_content" 
 	    android:layout_width="fill_parent" 
 	    android:baselineAligned="false">
-		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<LinearLayout android:orientation="vertical" android:id="@+id/hilaryBox" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
 		    <ImageView
 		        android:id="@+id/hiliaryImage"
 			    android:src="@drawable/hiliary_clinton"
@@ -42,7 +42,7 @@
 			    android:layout_height="125dp"
 				android:contentDescription="@string/image_desc" />
 		</LinearLayout>
-		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<LinearLayout android:orientation="vertical" android:id="@+id/cruzBox" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
  		    <ImageView
 			    android:id="@+id/cruzImage"
 			    android:src="@drawable/ted_cruz"			    

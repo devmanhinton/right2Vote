@@ -9,10 +9,25 @@ public class PolicyStatement {
 	private String policyArea;
 	private boolean doesAgree;
 	
+	public final static String HILARY = "Hilary Clinton";
+	public final static String CRUZ = "Ted Cruz";
+	
 	public PolicyStatement(String statement, String candidate, String policyArea) {
 		this.statement = statement;
 		this.candidate = candidate;
 		this.policyArea = policyArea;
+	}
+	
+	public String isFor(){
+		if (this.userAgrees()) {
+			return this.candidate;
+		} else {
+			if (this.candidate == PolicyStatement.HILARY) {
+				return PolicyStatement.CRUZ;
+			} else {
+				return PolicyStatement.HILARY;
+			}
+		}
 	}
 	
 	public String getStatement() {
@@ -33,12 +48,5 @@ public class PolicyStatement {
 	
 	public void setAgree(boolean agree) {
 		this.doesAgree = agree;
-	}
-	
-	public static HashMap whichCandiateWhichArea() {
-		HashMap <String, String[]> map = new HashMap();
-		
-		return map;
-		
 	}
 }

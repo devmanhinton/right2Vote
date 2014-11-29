@@ -24,11 +24,33 @@ public class ShowBallotActivity extends NavigationActivity {
 
 		if (PolicyStatementActivity.isUserDoneRating()) {
 			layout = (LinearLayout) findViewById(R.id.finished);
+			this.setUpFinishedView();
 		} else {	
 			layout = (LinearLayout) findViewById(R.id.notFinished);
 		}
 		
 		layout.setVisibility(View.VISIBLE);
+	}
+	
+	public void setUpFinishedView(){
+		LinearLayout hiliaryBox = (LinearLayout) findViewById(R.id.hilaryBox);
+		LinearLayout cruzBox = (LinearLayout) findViewById(R.id.cruzBox);
+		
+		for (int i=0; i < this.statements.length; i++){
+			System.out.println("DEVON IS HERE BITHES!");
+			PolicyStatement statement = statements[i];
+			String policyArea = statement.getPolicyArea();
+			
+			TextView view = new TextView(getApplicationContext());
+			view.setText(policyArea);
+			view.setTextSize(15);
+			
+			if (statement.isFor() == PolicyStatement.HILARY) {
+				hiliaryBox.addView(view);
+			} else {
+				cruzBox.addView(view);
+			}
+		}
 	}
 
 	@Override

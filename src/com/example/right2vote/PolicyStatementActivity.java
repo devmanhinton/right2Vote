@@ -18,10 +18,10 @@ public class PolicyStatementActivity extends NavigationActivity {
 	
 	static {
         /* Initialize Policy Statements */
-		statements[0] = new PolicyStatement("The United States should focus on reducing defense spending", "Clinton", "foreignPolicy");
-		statements[1] = new PolicyStatement("The United States should not like Unicorns", "Cruz", "Environment");
-		statements[2] = new PolicyStatement("We need higher taxes to put more money towards education", "Clinton", "Education");
-		statements[3] = new PolicyStatement("Any American should be able to buy any gun he or she wishes", "Cruz", "Gun Control");
+		statements[0] = new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, "Foreign Policy");
+		statements[1] = new PolicyStatement("The United States should not like Unicorns", PolicyStatement.CRUZ, "Environment");
+		statements[2] = new PolicyStatement("We need higher taxes to put more money towards education", PolicyStatement.HILARY, "Education");
+		statements[3] = new PolicyStatement("Any American should be able to buy any gun he or she wishes", PolicyStatement.CRUZ, "Gun Control");
 	}
 	
 	public static int numberPolicyStatements() {
