@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Right2Vote</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_send">Send this text</string>
+    <string name="image_desc">This is an image</string>
+    <string name="issues">issues</string>
+    <string name="myBallot">my ballot</string>
+    <string name="logistics">logistics</string>
+    <string name="share">share</string>
+    <string name="title_activity_voting_logistics">Logistics</string>
+    <string name="logistics_map_label">Where:</string>
+    <string name="logistics_date_label">When:</string>
+    <string name="logistics_date">November 1st, 2013</string>
+    <string name="home_button">home</string>
+    <string name="title_activity_policy_statement">PolicyStatementActivity</string>
+    <string name="title_activity_go_home">GoHomeActivity</string>
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+    <string name="title_activity_show_candidate">ShowCandidateActivity</string>
+    <string name="title_activity_show_winner">ShowWinnerActivity</string>
+    <string name="title_activity_show_ballot">ShowBallotActivity</string>
+    <string name="title_activity_ballot">BallotActivity</string>
+
+</resources>
