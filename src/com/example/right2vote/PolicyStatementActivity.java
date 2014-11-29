@@ -1,7 +1,7 @@
 package com.example.right2vote;
 
 import android.app.Activity;
-import com.example.right2vote.GoHomeActivity;
+import com.example.right2vote.NavigationActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import com.example.right2vote.PolicyStatement;
 
-public class PolicyStatementActivity extends GoHomeActivity {
+public class PolicyStatementActivity extends NavigationActivity {
 	private static PolicyStatement[] statements = new PolicyStatement[4];
 	private static int currentPolicyNumber = 0;
 	private static boolean userRatedAll = false;

@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.right2vote.GoHomeActivity;
+import com.example.right2vote.NavigationActivity;
 import com.example.right2vote.PolicyStatementActivity;
 
-public class ShowBallotActivity extends GoHomeActivity {
+public class ShowBallotActivity extends NavigationActivity {
 	private PolicyStatement[] statements; 
 
 	@Override

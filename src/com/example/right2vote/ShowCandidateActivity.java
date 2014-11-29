@@ -6,9 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import com.example.right2vote.GoHomeActivity;
+import com.example.right2vote.NavigationActivity;
 
-public class ShowCandidateActivity extends GoHomeActivity {
+public class ShowCandidateActivity extends NavigationActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
