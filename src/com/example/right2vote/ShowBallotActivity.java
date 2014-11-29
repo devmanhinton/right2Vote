@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.right2vote.GoHomeActivity;
@@ -20,13 +22,13 @@ public class ShowBallotActivity extends GoHomeActivity {
 		setContentView(R.layout.activity_show_ballot);
 
 		if (PolicyStatementActivity.isUserDoneRating()) {
-			TextView textView = (TextView) findViewById(R.id.finished);
-			textView.setTextSize(15);
-			textView.setText("Finished");
+			LinearLayout layout = (LinearLayout) findViewById(R.id.resultBox);
+			layout.setVisibility(View.VISIBLE);
 		} else {	
 			TextView textView = (TextView) findViewById(R.id.notFinished);
 			textView.setTextSize(15);
-			textView.setText("Not Finished");
+			textView.setVisibility(View.VISIBLE);
+			textView.requestLayout();
 		}
 	}
 

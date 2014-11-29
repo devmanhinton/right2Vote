@@ -8,41 +8,46 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.right2vote.ShowBallotActivity" >
-    <LinearLayout>
-	    <TextView
-	        android:id="@+id/notFinished"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	    />	    
-	    <TextView
-		    android:id="@+id/finished"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-	    />        
-    </LinearLayout>	
-	<LinearLayout android:orientation="horizontal" android:layout_height="fill_parent" android:layout_width="fill_parent" android:baselineAligned="false">
+    <TextView
+        android:id="@+id/notFinished"
+        android:text="@string/still_statements"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />	          
+	<LinearLayout 
+	    android:id="@+id/resultBox"
+	    android:orientation="horizontal" 
+	    android:visibility="gone"
+	    android:layout_height="wrap_content" 
+	    android:layout_width="fill_parent" 
+	    android:baselineAligned="false"
+	>
 		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
-   		    <TextView
-   		        android:text="@string/hello_world"
+		    <ImageView
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-	    	/>  
+			    android:id="@+id/hiliaryImage"
+			    android:src="@drawable/hiliary_clinton"
+				android:contentDescription="@string/image_desc"
+			/>
 		</LinearLayout>
 		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
-   		    <TextView
-   		        android:text="@string/hello_world"
+ 		    <ImageView
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-	    	/>  
+			    android:id="@+id/cruzImage"
+			    android:src="@drawable/ted_cruz"
+				android:contentDescription="@string/image_desc"
+			/>
 		</LinearLayout>
 	</LinearLayout>	
-	<LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent">
-	    <Button
-		    android:onClick="goHome"
-		    android:id="@+id/homeButton"
-		    android:text="@string/home_button"
-		    android:layout_height="wrap_content"
-		    android:layout_width="wrap_content"
-	    />    
-	</LinearLayout>	
+    <Button
+	    android:onClick="goHome"
+	    android:id="@+id/homeButton"
+	    android:text="@string/home_button"
+	    android:layout_marginTop="15dp"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+    />    
 </LinearLayout>

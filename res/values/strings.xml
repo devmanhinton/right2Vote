@@ -23,5 +23,5 @@
     <string name="title_activity_show_winner">ShowWinnerActivity</string>
     <string name="title_activity_show_ballot">ShowBallotActivity</string>
     <string name="title_activity_ballot">BallotActivity</string>
-
+    <string name="still_statements">Once you rank issues we will have the data to give you your results!</string>
 </resources>
