@@ -11,7 +11,7 @@ import com.example.right2vote.NavigationActivity;
 
 public class MainActivity extends NavigationActivity {
 	
-	/* See Navigation Activity for most of this activies functionality */
+	/* See Navigation Activity for most of this Activity's functionality */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
