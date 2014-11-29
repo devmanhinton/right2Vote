@@ -33,20 +33,22 @@ public class NavigationActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
     public void goHome(View view) {
     	Intent intent = new Intent(this, MainActivity.class);
     	startActivity(intent);    	
     }
+    
     public void goToVotingLogistics(View view) {
     	Intent intent = new Intent(this, VotingLogisticsActivity.class);
     	startActivity(intent);
     	
     }
+    
     public void goToRankIssues(View view) {
     	Intent intent = new Intent(this, PolicyStatementActivity.class);
     	startActivity(intent);
     }
+    
     public void goToBallot(View view) {
     	Intent intent = new Intent(this, ShowBallotActivity.class);
     	startActivity(intent);

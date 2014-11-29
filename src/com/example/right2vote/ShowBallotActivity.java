@@ -16,20 +16,19 @@ public class ShowBallotActivity extends NavigationActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		LinearLayout layout;
 		this.statements = PolicyStatementActivity.getStatements();
 		super.onCreate(savedInstanceState);
 	
 		setContentView(R.layout.activity_show_ballot);
 
 		if (PolicyStatementActivity.isUserDoneRating()) {
-			LinearLayout layout = (LinearLayout) findViewById(R.id.resultBox);
-			layout.setVisibility(View.VISIBLE);
+			layout = (LinearLayout) findViewById(R.id.finished);
 		} else {	
-			TextView textView = (TextView) findViewById(R.id.notFinished);
-			textView.setTextSize(15);
-			textView.setVisibility(View.VISIBLE);
-			textView.requestLayout();
+			layout = (LinearLayout) findViewById(R.id.notFinished);
 		}
+		
+		layout.setVisibility(View.VISIBLE);
 	}
 
 	@Override
