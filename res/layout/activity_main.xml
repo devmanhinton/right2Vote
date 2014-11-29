@@ -9,7 +9,7 @@ android:orientation="vertical" >
     android:layout_weight="1.0"
     android:orientation="horizontal" >   
 	    <RelativeLayout
-	    android:onClick="rankIssues"
+	    android:onClick="goToRankIssues"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_weight="1.0"
@@ -39,7 +39,7 @@ android:orientation="vertical" >
 		    </RelativeLayout>
 	    </RelativeLayout>
 	    <RelativeLayout
-	    android:onClick="showBallot"
+	    android:onClick="goToBallot"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_weight="1.0"
@@ -75,7 +75,7 @@ android:orientation="vertical" >
     android:layout_weight="1.0"
     android:orientation="horizontal" >
 	    <RelativeLayout
-	    android:onClick="showLogistics"
+	    android:onClick="goToVotingLogistics"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_weight="1.0"
