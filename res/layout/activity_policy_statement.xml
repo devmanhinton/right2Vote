@@ -36,12 +36,12 @@
 			 android:text="@string/agree" 
 			 android:layout_height="wrap_content"
 			 android:layout_width="wrap_content" />   
-	   <Button
-		    android:onClick="nextPolicyStatementOrFinish"
-		    android:id="@+id/disagree"
-		    android:text="@string/disagree" 
-		    android:layout_height="wrap_content"
-		    android:layout_width="wrap_content" /> 	  
+		<Button
+			android:onClick="nextPolicyStatementOrFinish"
+			android:id="@+id/disagree"
+			android:text="@string/disagree" 
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content" /> 	  
 		</LinearLayout>
 		
 	    <Button

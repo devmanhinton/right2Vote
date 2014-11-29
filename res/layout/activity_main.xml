@@ -4,133 +4,133 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical" >
 	<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1.0"
-    android:orientation="horizontal" >   
-	    <RelativeLayout
-	    android:onClick="goToRankIssues"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_weight="1.0"
-		android:background="@drawable/border"  >
-	    	<TextView
-	    	android:paddingLeft="5dp"
-	    	android:paddingTop="2dp"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:id="@+id/textIssues"
-		    android:text="@string/issues"
-		    android:textSize="24sp"
-		    android:textColor="#0000cc"
-		    android:textIsSelectable="true" />
-   		    <RelativeLayout
+	    android:orientation="horizontal" >   
+	    <RelativeLayout
+		    android:onClick="goToRankIssues"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
-		    android:layout_below="@id/textIssues"    >
+		    android:layout_weight="1.0"
+			android:background="@drawable/border" >
+	    	<TextView
+		    	android:paddingLeft="5dp"
+		    	android:paddingTop="2dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/textIssues"
+			    android:text="@string/issues"
+			    android:textSize="24sp"
+			    android:textColor="#0000cc"
+			    android:textIsSelectable="true" />
+   		    <RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@id/textIssues" >
 	   	     	<ImageView
-		        android:id="@+id/image1"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
-			    android:layout_centerInParent="true"
-		        android:src="@drawable/issues_red"
-		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/image_desc" /> 
+			        android:id="@+id/image1"
+			   	    android:layout_width="100dp"
+				    android:layout_height="100dp"
+				    android:layout_centerInParent="true"
+			        android:src="@drawable/issues_red"
+			        android:adjustViewBounds="true"
+			        android:contentDescription="@string/image_desc" /> 
 		    </RelativeLayout>
 	    </RelativeLayout>
 	    <RelativeLayout
-	    android:onClick="goToBallot"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_weight="1.0"
-		android:background="@drawable/border"  >
-	    	<TextView
-	    	android:paddingLeft="5dp"
-			android:paddingTop="2dp"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:id="@+id/textMyBallot"
-		    android:text="@string/myBallot"
-		    android:textSize="24sp"
-		    android:textColor="#0000cc"
-		    android:textIsSelectable="true" />
-   		    <RelativeLayout
+		    android:onClick="goToBallot"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
-		    android:layout_below="@id/textMyBallot"    >
-	   	     	<ImageView
-		        android:id="@+id/image2"
-		   	    android:layout_width="wrap_content"
+		    android:layout_weight="1.0"
+			android:background="@drawable/border" >
+	    	<TextView
+		    	android:paddingLeft="5dp"
+				android:paddingTop="2dp"
+			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    android:layout_centerInParent="true"
-		        android:src="@drawable/my_ballot_red"
-		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/image_desc" /> 
+			    android:id="@+id/textMyBallot"
+			    android:text="@string/myBallot"
+			    android:textSize="24sp"
+			    android:textColor="#0000cc"
+			    android:textIsSelectable="true" />
+   		    <RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@id/textMyBallot" >
+	   	     	<ImageView
+			        android:id="@+id/image2"
+			   	    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_centerInParent="true"
+			        android:src="@drawable/my_ballot_red"
+			        android:adjustViewBounds="true"
+			        android:contentDescription="@string/image_desc" /> 
 		    </RelativeLayout>
 	    </RelativeLayout>
 	</LinearLayout>
 	<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1.0"
-    android:orientation="horizontal" >
-	    <RelativeLayout
-	    android:onClick="goToVotingLogistics"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_weight="1.0"
-		android:background="@drawable/border"  >
-	    	<TextView
-	    	android:paddingLeft="5dp"
-	    	android:paddingTop="2dp"   
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:id="@+id/textLogistics"
-		    android:text="@string/logistics"
-		    android:textSize="24sp"
-		    android:textColor="#0000cc"
-		    android:textIsSelectable="true" />
-   		    <RelativeLayout
+	    android:orientation="horizontal" >
+	    <RelativeLayout
+		    android:onClick="goToVotingLogistics"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
-		    android:layout_below="@id/textLogistics"    >
+		    android:layout_weight="1.0"
+			android:background="@drawable/border" >
+	    	<TextView
+		    	android:paddingLeft="5dp"
+		    	android:paddingTop="2dp"   
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/textLogistics"
+			    android:text="@string/logistics"
+			    android:textSize="24sp"
+			    android:textColor="#0000cc"
+			    android:textIsSelectable="true" />
+   		    <RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@id/textLogistics" >
 	   	     	<ImageView
-		        android:id="@+id/image3"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
-			    android:layout_centerInParent="true"
-		        android:src="@drawable/logistics_red"
-		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/image_desc" /> 
+			        android:id="@+id/image3"
+			   	    android:layout_width="100dp"
+				    android:layout_height="100dp"
+				    android:layout_centerInParent="true"
+			        android:src="@drawable/logistics_red"
+			        android:adjustViewBounds="true"
+			        android:contentDescription="@string/image_desc" /> 
 		    </RelativeLayout>
 	    </RelativeLayout>
 	    <RelativeLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_weight="1.0"
-		android:background="@drawable/border"  >
-	    	<TextView
-	    	android:paddingLeft="5dp"
-	    	android:paddingTop="2dp"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:id="@+id/textShare"
-		    android:text="@string/share"
-		    android:textSize="24sp"
-		    android:textColor="#0000cc"
-		    android:textIsSelectable="true" />
-   		    <RelativeLayout
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
-		    android:layout_below="@id/textShare"    >
+		    android:layout_weight="1.0"
+			android:background="@drawable/border" >
+	    	<TextView
+		    	android:paddingLeft="5dp"
+		    	android:paddingTop="2dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/textShare"
+			    android:text="@string/share"
+			    android:textSize="24sp"
+			    android:textColor="#0000cc"
+			    android:textIsSelectable="true" />
+   		    <RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@id/textShare" >
 	   	     	<ImageView
-		        android:id="@+id/image4"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
-			    android:layout_centerInParent="true"
-		        android:src="@drawable/share_red"
-		        android:adjustViewBounds="true"
-		        android:contentDescription="@string/image_desc" /> 
+			        android:id="@+id/image4"
+			   	    android:layout_width="100dp"
+				    android:layout_height="100dp"
+				    android:layout_centerInParent="true"
+			        android:src="@drawable/share_red"
+			        android:adjustViewBounds="true"
+			        android:contentDescription="@string/image_desc" /> 
 		    </RelativeLayout>
 	    </RelativeLayout>
 	</LinearLayout>
