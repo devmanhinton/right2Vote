@@ -6,10 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
-import com.example.right2vote.PolicyStatement;
+import com.example.right2vote.NavigationActivity;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends NavigationActivity {
+	
+	/* See Navigation Activity for most of this activies functionality */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,20 +37,5 @@ public class MainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-    
-    /** Called when Users Clicks Logistics Image **/
-    public void showLogistics(View view) {
-    	Intent intent = new Intent(this, VotingLogisticsActivity.class);
-    	startActivity(intent);
-    	
-    }
-    public void rankIssues(View view) {
-    	Intent intent = new Intent(this, PolicyStatementActivity.class);
-    	startActivity(intent);
-    }
-    public void showBallot(View view) {
-    	Intent intent = new Intent(this, ShowBallotActivity.class);
-    	startActivity(intent);
     }
 }
