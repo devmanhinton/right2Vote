@@ -37,12 +37,12 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080016;
-        public static final int agree=0x7f08000a;
+        public static final int agree=0x7f080009;
         public static final int cruzImage=0x7f080010;
-        public static final int disagree=0x7f08000b;
+        public static final int disagree=0x7f08000a;
         public static final int finished=0x7f08000e;
         public static final int hiliaryImage=0x7f08000f;
-        public static final int homeButton=0x7f080009;
+        public static final int homeButton=0x7f08000b;
         public static final int image1=0x7f080001;
         public static final int image2=0x7f080003;
         public static final int image3=0x7f080005;
