@@ -35,18 +35,20 @@
 	    android:baselineAligned="false">
 		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
 		    <ImageView
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:id="@+id/hiliaryImage"
+		        android:id="@+id/hiliaryImage"
 			    android:src="@drawable/hiliary_clinton"
+		        android:adjustViewBounds="true"
+			    android:layout_width="125dp"
+			    android:layout_height="125dp"
 				android:contentDescription="@string/image_desc" />
 		</LinearLayout>
 		<LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
  		    <ImageView
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
 			    android:id="@+id/cruzImage"
-			    android:src="@drawable/ted_cruz"
+			    android:src="@drawable/ted_cruz"			    
+		        android:adjustViewBounds="true"
+			    android:layout_width="125dp"
+			    android:layout_height="125dp"
 				android:contentDescription="@string/image_desc" />
 		</LinearLayout>
 	</LinearLayout>	
