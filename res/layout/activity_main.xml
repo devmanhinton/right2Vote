@@ -23,7 +23,7 @@ android:background="@drawable/background_image" >
 			    android:layout_height="100dp"
 		        android:src="@drawable/button_2"
 		        android:layout_toRightOf="@id/button1"
-				android:layout_marginLeft="10dp"
+				android:layout_marginLeft="5dp"
 		        android:adjustViewBounds="true"
 		        android:contentDescription="@string/image_desc" />      
    	     	<ImageView
@@ -42,7 +42,7 @@ android:background="@drawable/background_image" >
 		        android:src="@drawable/button_4"
 		        android:layout_toRightOf="@id/button3"
 		        android:layout_below="@id/button2"
-		        android:layout_marginLeft="10dp"
+		        android:layout_marginLeft="5dp"
 		        android:adjustViewBounds="true"
 		        android:contentDescription="@string/image_desc" />            
     </RelativeLayout>
