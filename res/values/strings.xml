@@ -29,5 +29,7 @@
     <string name="title_activity_show_ballot">ShowBallotActivity</string>
     <string name="title_activity_ballot">BallotActivity</string>
     <string name="title_activity_voting_logistics">Logistics</string>
+    
+    <color name="red">#FFFFFF</color>
      
 </resources>
