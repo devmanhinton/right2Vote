@@ -11,7 +11,8 @@
     <LinearLayout 
         android:id="@+id/notFinished"
         android:visibility="gone"
-        android:layout_height="wrap_content" 
+        android:layout_weight="5.0"
+        android:layout_height="0dp" 
         android:layout_width="fill_parent"
         android:orientation="vertical" >
         <TextView 
@@ -30,7 +31,8 @@
 	    android:id="@+id/finished"
 	    android:orientation="horizontal" 
 	    android:visibility="gone"
-	    android:layout_height="wrap_content" 
+	    android:layout_weight="5.0"
+	    android:layout_height="0dp" 
 	    android:layout_width="fill_parent" 
 	    android:baselineAligned="false">
 		<LinearLayout android:orientation="vertical" android:id="@+id/hilaryBox" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
@@ -38,27 +40,47 @@
 		        android:id="@+id/hiliaryImage"
 			    android:src="@drawable/hiliary_clinton"
 		        android:adjustViewBounds="true"
+		        android:background="@drawable/border"
 			    android:layout_width="125dp"
 			    android:layout_height="125dp"
 			    android:layout_marginBottom="10dp"
 				android:contentDescription="@string/image_desc" />
+		    <TextView
+		        android:text="@string/hilary"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20sp">
+		    </TextView>
 		</LinearLayout>
 		<LinearLayout android:orientation="vertical" android:id="@+id/cruzBox" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
  		    <ImageView
 			    android:id="@+id/cruzImage"
 			    android:src="@drawable/ted_cruz"			    
 		        android:adjustViewBounds="true"
+		        android:background="@drawable/border"
 			    android:layout_width="125dp"
 			    android:layout_height="125dp"
 			    android:layout_marginBottom="10dp"
 				android:contentDescription="@string/image_desc" />
+		    <TextView
+		        android:text="@string/cruz"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20sp">
+		    </TextView>
 		</LinearLayout>
 	</LinearLayout>	
-    <Button
-	    android:onClick="goHome"
-	    android:id="@+id/homeButton"
-	    android:text="@string/home_button"
-	    android:layout_marginTop="15dp"
-	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content" />    
+	<LinearLayout 
+	    android:orientation="horizontal" 
+	    android:layout_weight="1.0"
+	    android:layout_height="0dp" 
+	    android:layout_width="fill_parent" 
+	    android:baselineAligned="false">
+	    <Button
+		    android:onClick="goHome"
+		    android:id="@+id/homeButton"
+		    android:text="@string/home_button"
+			android:layout_height="wrap_content"
+		    android:layout_width="wrap_content" />  
+	 </LinearLayout>  
 </LinearLayout>

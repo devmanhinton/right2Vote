@@ -8,18 +8,31 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.right2vote.ShowCandidateActivity" >
-
-    <TextView
-        android:id="@+id/winner"
-        android:text="@string/winningCandidateTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    
-    <LinearLayout android:visibility="gone" android:id="@+id/hilaryBox" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">
+	<LinearLayout 
+	    android:orientation="horizontal" 
+	    android:layout_weight=".5"
+	    android:layout_height="0dp" 
+	    android:layout_width="fill_parent" 
+	    android:baselineAligned="false">       
+	    <TextView
+	        android:id="@+id/winner"
+	        android:text="@string/winningCandidateTitle"
+	        android:textSize="20sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+    </LinearLayout> 
+    <LinearLayout 
+        android:visibility="gone"
+        android:id="@+id/hilaryBox"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+		android:layout_weight="4.5"
+        android:layout_width="match_parent">
 		<ImageView
 			android:id="@+id/hiliaryImage"
 			android:src="@drawable/hiliary_clinton"
 			android:adjustViewBounds="true"
+			android:background="@drawable/border"
 			android:layout_width="200dp"
 			android:layout_height="200dp"
 			android:layout_marginBottom="10dp"
@@ -29,13 +42,20 @@
 	        android:text="@string/hilaryChosenText"
 	        android:gravity="center"
 	        android:layout_width="wrap_content"
-	        android:layout_height="match_parent"/>      
+	        android:layout_height="wrap_content"/>      
     </LinearLayout>
-    <LinearLayout android:visibility="gone" android:id="@+id/cruzBox" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">        
+    <LinearLayout 
+        android:visibility="gone"
+        android:id="@+id/cruzBox"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+		android:layout_weight="4.5"
+        android:layout_width="match_parent">        
 		<ImageView
 			android:id="@+id/cruzImage"
 			android:src="@drawable/ted_cruz"
 			android:adjustViewBounds="true"
+			android:background="@drawable/border"
 			android:layout_width="200dp"
 			android:layout_height="200dp"
 			android:layout_marginBottom="10dp"
@@ -45,14 +65,19 @@
 	        android:text="@string/cruzChosenText"
 	        android:gravity="center"
 	        android:layout_width="wrap_content"
-	        android:layout_height="match_parent"/>     
+	        android:layout_height="wrap_content"/>     
     </LinearLayout>
-    
-    <Button
-	    android:onClick="goHome"
-	    android:id="@+id/homeButton"
-	    android:text="@string/home_button"
-	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content" />
-    
+	<LinearLayout 
+	    android:orientation="horizontal" 
+	    android:layout_weight="1.0"
+	    android:layout_height="0dp" 
+	    android:layout_width="fill_parent" 
+	    android:baselineAligned="false">    
+	    <Button
+		    android:onClick="goHome"
+		    android:id="@+id/homeButton"
+		    android:text="@string/home_button"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content" />
+    </LinearLayout>   
 </LinearLayout>

@@ -29,6 +29,7 @@
    	<TextView
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
+	   	android:layout_marginTop="20dp"
 	    android:id="@+id/logisticsMapLabel"
 	    android:text="@string/logistics_map_label"
 	    android:textSize="24sp"
@@ -48,6 +49,7 @@
     <Button
 	    android:layout_height="wrap_content"
 	    android:layout_width="wrap_content"
+	    android:layout_marginTop="40dp"
 	    android:id="@+id/homeButton"
 	    android:text="@string/home_button"
 	    android:layout_below="@id/logisticsMap" 
