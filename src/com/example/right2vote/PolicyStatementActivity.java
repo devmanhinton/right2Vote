@@ -17,7 +17,6 @@ import com.example.right2vote.PolicyStatement;
 public class PolicyStatementActivity extends NavigationActivity {
 	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
 	private static PolicyStatement[] statements = new PolicyStatement[4];
-	private static boolean userRatedAll = false;
 	private PolicyStatement currentStatement;
 	private String policyArea;
 	
@@ -29,16 +28,12 @@ public class PolicyStatementActivity extends NavigationActivity {
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 	}
 	
-	public static int numberPolicyStatements() {
-		return PolicyStatementActivity.statements.length;
-	}
-	
-	public static PolicyStatement[] getStatements(){
-		return PolicyStatementActivity.statements;
+	public static ArrayList<PolicyStatement> getStatements(){
+		return PolicyStatementActivity.statementCollection.statementsIn(PolicyStatement.FOREIGN_POLICY);
 	}
 	
 	public static boolean isUserDoneRating() {
-		return PolicyStatementActivity.userRatedAll;
+		return PolicyStatementActivity.statementCollection.isDoneIn(PolicyStatement.FOREIGN_POLICY);
 	}
 	
 	public PolicyStatementCollection collectionOfStatements() {
@@ -101,7 +96,6 @@ public class PolicyStatementActivity extends NavigationActivity {
 		Intent intent = new Intent(this, ShowCandidateActivity.class);
 		intent.putExtra("winner", this.winner());
 		this.recordDone();
-		PolicyStatementActivity.userRatedAll = true;
 		startActivity(intent);
 	}
 	
@@ -110,6 +104,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 	
 	public void recordDone(){
+		this.collectionOfStatements().recordDoneIn(this.policyArea);
 		
 	}
 	

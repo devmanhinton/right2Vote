@@ -1,5 +1,7 @@
 package com.example.right2vote;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +14,7 @@ import com.example.right2vote.NavigationActivity;
 import com.example.right2vote.PolicyStatementActivity;
 
 public class ShowBallotActivity extends NavigationActivity {
-	private PolicyStatement[] statements; 
+	private ArrayList<PolicyStatement> statements; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,8 @@ public class ShowBallotActivity extends NavigationActivity {
 		LinearLayout hiliaryBox = (LinearLayout) findViewById(R.id.hilaryBox);
 		LinearLayout cruzBox = (LinearLayout) findViewById(R.id.cruzBox);
 		
-		for (int i=0; i < this.statements.length; i++){
-			PolicyStatement statement = statements[i];
+		for (int i=0; i < this.statements.size(); i++){
+			PolicyStatement statement = statements.get(i);
 			String policyArea = statement.getPolicyArea();
 			
 			TextView view = new TextView(getApplicationContext());
