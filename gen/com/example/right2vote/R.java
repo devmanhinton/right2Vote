@@ -48,8 +48,8 @@ public final class R {
         public static final int action_settings=0x7f090017;
         public static final int agree=0x7f090006;
         public static final int button1=0x7f090001;
-        public static final int button2=0x7f090002;
-        public static final int button3=0x7f090003;
+        public static final int button2=0x7f090003;
+        public static final int button3=0x7f090002;
         public static final int button4=0x7f090004;
         public static final int cruzBox=0x7f09000e;
         public static final int cruzImage=0x7f09000f;
