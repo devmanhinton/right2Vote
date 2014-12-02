@@ -11,16 +11,16 @@ android:background="@drawable/background_image" >
    	     	<ImageView
 		        android:id="@+id/button1"
 		        android:onClick="goToRankIssues"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
+		   	    android:layout_width="125dp"
+			    android:layout_height="125dp"
 		        android:src="@drawable/button_1"
 		        android:adjustViewBounds="true"
 		        android:contentDescription="@string/image_desc" />
    	     	<ImageView
 		        android:id="@+id/button2"
 		        android:onClick="goToBallot"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
+		   	    android:layout_width="125dp"
+			    android:layout_height="125dp"
 		        android:src="@drawable/button_2"
 		        android:layout_toRightOf="@id/button1"
 				android:layout_marginLeft="5dp"
@@ -29,16 +29,16 @@ android:background="@drawable/background_image" >
    	     	<ImageView
 		        android:id="@+id/button3"
 		        android:onClick="goToVotingLogistics"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
+		   	    android:layout_width="125dp"
+			    android:layout_height="125dp"
 		        android:src="@drawable/button_3"
 		        android:layout_below="@id/button1"
 		        android:adjustViewBounds="true"
 		        android:contentDescription="@string/image_desc" />
    	     	<ImageView
 		        android:id="@+id/button4"
-		   	    android:layout_width="100dp"
-			    android:layout_height="100dp"
+		   	    android:layout_width="125dp"
+			    android:layout_height="125dp"
 		        android:src="@drawable/button_4"
 		        android:layout_toRightOf="@id/button3"
 		        android:layout_below="@id/button2"
