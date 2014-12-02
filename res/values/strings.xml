@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Right2Vote</string>
+    <string name="app_name">right2Vote</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="button_send">Send this text</string>
@@ -19,7 +19,7 @@
     <string name="still_statements">Once you rank issues we will have the data to give you your results!</string>
     <string name="issues_button">Rank Issues</string>
     <string name="winningCandidateTitle">Your Match</string>
-    <string name="hilaryChosenText">Hilary Clinton is</string>
+    <string name="hilaryChosenText">Hillary Clinton is</string>
     <string name="cruzChosenText">Ted Cruz is</string>
     <string name="hilary">Hilary Clinton</string>
     <string name="cruz">Ted Cruz</string>
@@ -31,5 +31,7 @@
     <string name="title_activity_show_ballot">Your Ballot</string>
     <string name="title_activity_ballot">BallotActivity</string>
     <string name="title_activity_voting_logistics">Logistics</string>
+    
+    <color name="red">#FFFFFF</color>
      
 </resources>
