@@ -1,5 +1,8 @@
 package com.example.right2vote;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
 import com.example.right2vote.NavigationActivity;
 import android.content.Intent;
@@ -12,16 +15,23 @@ import com.example.right2vote.PolicyStatement;
 
 public class PolicyStatementActivity extends NavigationActivity {
 	private static PolicyStatement[] statements = new PolicyStatement[4];
+	private static Map<String, Integer> policyIndexMap = new HashMap<String, Integer>();
 	private static int currentPolicyNumber = 0;
 	private static boolean userRatedAll = false;
 	private PolicyStatement currentStatement;
+	private String policyKind;
 	
 	static {
         /* Initialize Policy Statements */
-		statements[0] = new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, "Foreign Policy");
-		statements[1] = new PolicyStatement("The United States should not like Unicorns", PolicyStatement.CRUZ, "Environment");
-		statements[2] = new PolicyStatement("We need higher taxes to put more money towards education", PolicyStatement.HILARY, "Education");
-		statements[3] = new PolicyStatement("Any American should be able to buy any gun he or she wishes", PolicyStatement.CRUZ, "Gun Control");
+		statements[0] = new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
+		statements[1] = new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
+		statements[2] = new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
+		statements[3] = new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
+//		statements[1] = new PolicyStatement("The United States should not like Unicorns", PolicyStatement.CRUZ, PolicyStatement.THE_ENVIRONMENT);
+//		statements[2] = new PolicyStatement("We need higher taxes to put more money towards education", PolicyStatement.HILARY, PolicyStatement.EDUCATION);
+//		statements[3] = new PolicyStatement("Any American should be able to buy any gun he or she wishes", PolicyStatement.CRUZ, PolicyStatement.DOMESTIC_POLCIY);
+		
+		/* Initialize Map*/
 	}
 	
 	public static int numberPolicyStatements() {
