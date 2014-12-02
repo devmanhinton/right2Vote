@@ -17,7 +17,6 @@ import com.example.right2vote.PolicyStatement;
 public class PolicyStatementActivity extends NavigationActivity {
 	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
 	private static PolicyStatement[] statements = new PolicyStatement[4];
-	private static int currentPolicyNumber = 0;
 	private static boolean userRatedAll = false;
 	private PolicyStatement currentStatement;
 	private String policyArea;
