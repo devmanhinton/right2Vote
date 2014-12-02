@@ -9,6 +9,8 @@ public class PolicyStatementCollection {
 	
 	private Map<String, Iterator<PolicyStatement>> IteratorByDomain = new HashMap<String, Iterator<PolicyStatement>>();
 	private Map<String, ArrayList<PolicyStatement>> policyStatementByDomain = new HashMap<String, ArrayList<PolicyStatement>>();
+	private Map<String, String> winnerByDomain = new HashMap<String, String>();
+	private Map<String, Boolean> doneByDomain = new HashMap<String, Boolean>();
 	
 	public PolicyStatementCollection() {
 	}
@@ -58,6 +60,47 @@ public class PolicyStatementCollection {
 		ArrayList<PolicyStatement> statements = this.statementsIn(domain);
 		if (statements != null){
 			this.IteratorByDomain.put(domain, statements.iterator());
+		}
+	}
+	
+	// Calculate Winner
+	public String calculateWinnerIn(String domain) {
+		int hilary = 0;
+		int ted = 0;
+		
+		ArrayList<PolicyStatement> statements = this.statementsIn(domain);
+		
+		for (int i = 0; i< statements.size(); i++){
+			if (statements.get(i).isFor() == PolicyStatement.HILARY) {
+				hilary +=1;
+			} else {
+				ted +=1;
+			}
+		}
+		String winner = ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY; 
+		
+		this.winnerByDomain.put(domain, winner);
+		return winner;  		
+	}
+	
+	// Return cached winner, Ugly but for my own use. This is confusing with the calculateWinnerMethod
+	// Ideally this would automatically update as the user goes through the statements
+	public String winnerIn(String domain){
+		return this.winnerByDomain.get(domain);
+	}
+	
+	// Record done
+	public void recordDoneIn(String domain){
+		this.doneByDomain.put(domain, true);
+	}
+	
+	// Check if done
+	public boolean isDoneIn(String domain) {
+		Boolean bool = this.doneByDomain.get(domain);
+		if (bool == null){
+			return false;
+		} else {
+			return true;
 		}
 	}
 	

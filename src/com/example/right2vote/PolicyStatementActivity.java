@@ -99,26 +99,18 @@ public class PolicyStatementActivity extends NavigationActivity {
 	
 	public void calculateWinnerAndShow(View view){
 		Intent intent = new Intent(this, ShowCandidateActivity.class);
-		intent.putExtra("winner", this.calculateWinner());
+		intent.putExtra("winner", this.winner());
+		this.recordDone();
 		PolicyStatementActivity.userRatedAll = true;
 		startActivity(intent);
 	}
 	
-	public String calculateWinner(){
-		int hilary = 0;
-		int ted = 0;
+	public String winner(){
+		return this.collectionOfStatements().calculateWinnerIn(this.policyArea);
+	}
+	
+	public void recordDone(){
 		
-		ArrayList<PolicyStatement> statements = this.collectionOfStatements().statementsIn(this.policyArea);
-		
-		for (int i = 0; i< statements.size(); i++){
-			if (statements.get(i).isFor() == PolicyStatement.HILARY) {
-				hilary +=1;
-			} else {
-				ted +=1;
-			}
-		}
-		
-		return ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY; /* Tie goes to Hilary :) */
 	}
 	
 	private void reset(){
