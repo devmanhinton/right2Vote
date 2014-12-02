@@ -41,7 +41,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 		return PolicyStatementActivity.userRatedAll;
 	}
 	
-	public static PolicyStatementCollection collectionOfStatements() {
+	public PolicyStatementCollection collectionOfStatements() {
 		return PolicyStatementActivity.statementCollection;
 	}
 
@@ -81,7 +81,6 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 	
 	public void nextPolicyStatementOrFinish(View view) {
-    	PolicyStatementActivity.currentPolicyNumber += 1;
     	
     	if (view.getId() == R.id.agree) {
     		this.currentStatement.setAgree(true);
@@ -121,7 +120,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 	
 	private void reset(){
-		PolicyStatementActivity.currentPolicyNumber = 0; 
+		this.collectionOfStatements().resetIterationIn(this.policyArea);
 	}
 
 

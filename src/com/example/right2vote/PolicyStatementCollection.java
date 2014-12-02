@@ -53,6 +53,14 @@ public class PolicyStatementCollection {
 		}
 	}
 	
+	// Reset Iteration
+	public void resetIterationIn(String domain) {
+		ArrayList<PolicyStatement> statements = this.statementsIn(domain);
+		if (statements != null){
+			this.IteratorByDomain.put(domain, statements.iterator());
+		}
+	}
+	
 	private ArrayList<PolicyStatement> getOrAddStatements(String domain) {
 		ArrayList<PolicyStatement> statements = this.policyStatementByDomain.get(domain);
 		if (statements == null) {
