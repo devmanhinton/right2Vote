@@ -1,5 +1,6 @@
 package com.example.right2vote;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -108,8 +109,10 @@ public class PolicyStatementActivity extends NavigationActivity {
 		int hilary = 0;
 		int ted = 0;
 		
-		for (int i = 0; i<this.statements.length; i++){
-			if (this.statements[i].isFor() == PolicyStatement.HILARY) {
+		ArrayList<PolicyStatement> statements = this.collectionOfStatements().statementsIn(this.policyArea);
+		
+		for (int i = 0; i< statements.size(); i++){
+			if (statements.get(i).isFor() == PolicyStatement.HILARY) {
 				hilary +=1;
 			} else {
 				ted +=1;
