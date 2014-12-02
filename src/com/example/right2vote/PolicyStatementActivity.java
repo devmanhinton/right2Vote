@@ -14,24 +14,19 @@ import android.widget.TextView;
 import com.example.right2vote.PolicyStatement;
 
 public class PolicyStatementActivity extends NavigationActivity {
+	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
 	private static PolicyStatement[] statements = new PolicyStatement[4];
-	private static Map<String, Integer> policyIndexMap = new HashMap<String, Integer>();
 	private static int currentPolicyNumber = 0;
 	private static boolean userRatedAll = false;
 	private PolicyStatement currentStatement;
-	private String policyKind;
+	private String policyArea;
 	
 	static {
         /* Initialize Policy Statements */
-		statements[0] = new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
-		statements[1] = new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
-		statements[2] = new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
-		statements[3] = new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY);
-//		statements[1] = new PolicyStatement("The United States should not like Unicorns", PolicyStatement.CRUZ, PolicyStatement.THE_ENVIRONMENT);
-//		statements[2] = new PolicyStatement("We need higher taxes to put more money towards education", PolicyStatement.HILARY, PolicyStatement.EDUCATION);
-//		statements[3] = new PolicyStatement("Any American should be able to buy any gun he or she wishes", PolicyStatement.CRUZ, PolicyStatement.DOMESTIC_POLCIY);
-		
-		/* Initialize Map*/
+		statementCollection.addStatement(new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 	}
 	
 	public static int numberPolicyStatements() {
@@ -45,17 +40,25 @@ public class PolicyStatementActivity extends NavigationActivity {
 	public static boolean isUserDoneRating() {
 		return PolicyStatementActivity.userRatedAll;
 	}
+	
+	public static PolicyStatementCollection collectionOfStatements() {
+		return PolicyStatementActivity.statementCollection;
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_policy_statement);
 		
-		this.currentStatement = PolicyStatementActivity.statements[this.currentPolicyNumber];
+		this.policyArea = PolicyStatement.FOREIGN_POLICY;
+		this.currentStatement = collectionOfStatements().nextStatementIn(this.policyArea);
+		this.updateToCurrentStatement();
+	}
+	
+	private void updateToCurrentStatement(){
 		TextView textView = (TextView) findViewById(R.id.policyStatement);
-		
 		textView.setTextSize(15);
-		textView.setText(this.currentStatement.getStatement());
+		textView.setText(this.currentStatement.getStatement());		
 	}
 
 	@Override
@@ -85,13 +88,13 @@ public class PolicyStatementActivity extends NavigationActivity {
     	} else {
     		this.currentStatement.setAgree(false);
     	}
+    	this.currentStatement = collectionOfStatements().nextStatementIn(this.policyArea);
     	
-    	if (this.isFinished()) {
+    	if (this.currentStatement == null) {
     		this.reset(); 
     		this.calculateWinnerAndShow(view);
     	} else {
-    		Intent intent = new Intent(this, PolicyStatementActivity.class);
-    		startActivity(intent);
+    		this.updateToCurrentStatement();
     	}
 	}
 	
@@ -115,10 +118,6 @@ public class PolicyStatementActivity extends NavigationActivity {
 		}
 		
 		return ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY; /* Tie goes to Hilary :) */
-	}
-	
-	private boolean isFinished(){
-		return PolicyStatementActivity.currentPolicyNumber == PolicyStatementActivity.numberPolicyStatements();
 	}
 	
 	private void reset(){
