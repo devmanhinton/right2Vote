@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class PolicyStatementCollection {
 	
-	private Map<String, Iterator> IteratorByDomain = new HashMap<String, Iterator>();
+	private Map<String, Iterator<PolicyStatement>> IteratorByDomain = new HashMap<String, Iterator<PolicyStatement>>();
 	private Map<String, ArrayList<PolicyStatement>> policyStatementByDomain = new HashMap<String, ArrayList<PolicyStatement>>();
 	
 	public PolicyStatementCollection() {
@@ -27,7 +27,7 @@ public class PolicyStatementCollection {
 	// Return # in a given type
 	public int numStatementsIn(String domain) {
 		ArrayList<PolicyStatement> statements = this.policyStatementByDomain.get(domain);
-		if (statements== null) {
+		if (statements == null) {
 				return 0;
 		}
 		return statements.size();
@@ -35,15 +35,22 @@ public class PolicyStatementCollection {
 	
 	// Return next statement in type or -1
 	public PolicyStatement nextStatementIn(String domain){
-		Integer _nextIndex = this.currentIndexByDomain.get(domain);
-		if (_nextIndex == null) {
-			return null;
+		Iterator<PolicyStatement> itr = this.IteratorByDomain.get(domain);
+		if (itr == null) {
+			ArrayList<PolicyStatement> statements = this.statementsIn(domain);
+			if (statements == null){
+				return null;
+			}
+			itr = statements.iterator();
+			this.IteratorByDomain.put(domain, itr);
 		}
 		
-		int nextIndex = _nextIndex.intValue();
-		
-		
-		this.currentIndexByDomain.put(domain, nextIndex + 1);
+		if (itr.hasNext()) {
+			return (PolicyStatement) itr.next();
+		} else {
+			return null;
+			
+		}
 	}
 	
 	private ArrayList<PolicyStatement> getOrAddStatements(String domain) {
