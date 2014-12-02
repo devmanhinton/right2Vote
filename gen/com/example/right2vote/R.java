@@ -42,7 +42,6 @@ public final class R {
         public static final int poster=0x7f02000e;
         public static final int share_red=0x7f02000f;
         public static final int ted_cruz=0x7f020010;
-        public static final int voter=0x7f020011;
     }
     public static final class id {
         public static final int action_settings=0x7f090017;

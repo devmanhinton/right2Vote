@@ -46,12 +46,13 @@ android:background="@drawable/background_image" >
 		        android:contentDescription="@string/image_desc" />
    	     	<ImageView
 		        android:id="@+id/button4"
-		        android:onClick="goToVotingLogistics"
 		   	    android:layout_width="125dp"
 			    android:layout_height="125dp"
 			    android:layout_marginTop="5dp"
+			    android:layout_marginLeft="5dp"
 		        android:src="@drawable/button_4"
 		        android:layout_below="@id/button1"
+		        android:layout_toRightOf="@id/button2"
 		        android:adjustViewBounds="true"
 		        android:contentDescription="@string/image_desc" /> 
     </RelativeLayout>
