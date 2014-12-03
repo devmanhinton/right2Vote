@@ -22,6 +22,9 @@ public class PolicyStatementCollection {
 		this.policyWinners.put(PolicyStatement.CRUZ, new HashSet<String>());
 	}
 	
+	public String[] policyAreas() {
+		return this.policyStatementByDomain.keySet().toArray(new String[0]);
+	}
 	// Add New Policy Statement
 	public boolean addStatement(PolicyStatement statement) {
 		ArrayList<PolicyStatement> statements = this.getOrAddStatements(statement.getPolicyArea());
@@ -124,7 +127,9 @@ public class PolicyStatementCollection {
 			ArrayList<PolicyStatement> statements = etr.getValue();
 			String policyWinner = this.winnerFromStatements(statements);
 			String policyArea = etr.getKey();
-			this.policyWinners.get(policyWinner).add(policyArea);
+			if (policyWinner != null) {
+				this.policyWinners.get(policyWinner).add(policyArea);
+			}
 		}
 	}
 	
@@ -134,12 +139,19 @@ public class PolicyStatementCollection {
 
 		for (int i=0; i < statements.size(); i++){
 			PolicyStatement statement = statements.get(i);
+			String statementFor = statement.isFor();
 			
-			if (statement.isFor() == PolicyStatement.HILARY) {
+			if (statementFor == null) {
+				// Do Nothing
+			} else if (statementFor.equals(PolicyStatement.HILARY)){
 				hilary +=1;
-			} else {
+			} else if (statementFor.equals(PolicyStatement.CRUZ)) {
 				ted += 1;
-			}
+			} 
+		}
+		
+		if (hilary == 0 && ted == 0){
+			return null;
 		}
 		
 		return ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY;
