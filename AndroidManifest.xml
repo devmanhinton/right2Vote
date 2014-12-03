@@ -50,6 +50,10 @@
             android:name=".BallotActivity"
             android:label="@string/title_activity_ballot" >
         </activity>
+        <activity
+            android:name=".ShowPolicyAreasActivity"
+            android:label="@string/title_activity_show_policy_areas" >
+        </activity>
     </application>
 
 </manifest>

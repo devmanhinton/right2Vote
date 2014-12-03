@@ -42,16 +42,20 @@ public class NavigationActivity extends Activity {
 	public void goToVotingLogistics(View view) {
 		Intent intent = new Intent(this, VotingLogisticsActivity.class);
 		startActivity(intent);
-		
 	}
 	
-	public void goToRankIssues(View view) {
+	public void goToRankIssues(View view, String policyArea) {
 		Intent intent = new Intent(this, PolicyStatementActivity.class);
+		intent.putExtra("policyArea", policyArea);
 		startActivity(intent);
 	}
 	
 	public void goToBallot(View view) {
 		Intent intent = new Intent(this, ShowBallotActivity.class);
+		startActivity(intent);
+	}
+	public void goToSeePolicyAreas(View view) {
+		Intent intent = new Intent(this, ShowPolicyAreasActivity.class);
 		startActivity(intent);
 	}
 }

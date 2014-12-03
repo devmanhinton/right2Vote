@@ -8,6 +8,7 @@ public class PolicyStatement {
 	private String candidate;
 	private String policyArea;
 	private boolean doesAgree;
+	private boolean seen = false;
 	
 	public final static String HILARY = "Hilary Clinton";
 	public final static String CRUZ = "Ted Cruz";
@@ -24,6 +25,9 @@ public class PolicyStatement {
 	}
 	
 	public String isFor(){
+		if (!this.seen){
+			return null;
+		}
 		if (this.userAgrees()) {
 			return this.candidate;
 		} else {
@@ -52,6 +56,7 @@ public class PolicyStatement {
 	}
 	
 	public void setAgree(boolean agree) {
+		this.seen = true;
 		this.doesAgree = agree;
 	}
 }

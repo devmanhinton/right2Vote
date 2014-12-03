@@ -23,7 +23,6 @@
     <string name="cruzChosenText">Ted Cruz is</string>
     <string name="hilary">Hilary Clinton</string>
     <string name="cruz">Ted Cruz</string>
-
     <string name="title_activity_policy_statement">Rank the Issues</string>
     <string name="title_activity_go_home">GoHomeActivity</string>
     <string name="title_activity_show_candidate">Your Match</string>
@@ -31,7 +30,9 @@
     <string name="title_activity_show_ballot">Your Ballot</string>
     <string name="title_activity_ballot">BallotActivity</string>
     <string name="title_activity_voting_logistics">Logistics</string>
-    
+
     <color name="red">#FFFFFF</color>
-     
+
+    <string name="title_activity_show_policy_areas">ShowPolicyAreasActivity</string>
+
 </resources>

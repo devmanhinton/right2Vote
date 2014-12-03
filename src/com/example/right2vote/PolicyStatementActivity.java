@@ -15,17 +15,12 @@ import android.widget.TextView;
 import com.example.right2vote.PolicyStatement;
 
 public class PolicyStatementActivity extends NavigationActivity {
-	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
-	private static PolicyStatement[] statements = new PolicyStatement[4];
+	private static PolicyStatementCollection statementCollection;
 	private PolicyStatement currentStatement;
 	private String policyArea;
 	
 	static {
-        /* Initialize Policy Statements */
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection = ShowPolicyAreasActivity.getStatementCollection();
 	}
 	
 	public static PolicyStatementCollection getStatementsCollection(){
@@ -33,7 +28,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 	
 	public static boolean isUserDoneRating() {
-		return PolicyStatementActivity.statementCollection.isDoneIn(PolicyStatement.FOREIGN_POLICY);
+		return PolicyStatementActivity.statementCollection.isDoneIn(PolicyStatement.EDUCATION);
 	}
 	
 	public PolicyStatementCollection collectionOfStatements() {
@@ -45,7 +40,9 @@ public class PolicyStatementActivity extends NavigationActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_policy_statement);
 		
-		this.policyArea = PolicyStatement.FOREIGN_POLICY;
+		Bundle extras = getIntent().getExtras();
+		
+		this.policyArea = extras.getString("policyArea");
 		this.currentStatement = collectionOfStatements().nextStatementIn(this.policyArea);
 		this.updateToCurrentStatement();
 	}
