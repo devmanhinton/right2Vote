@@ -2,8 +2,12 @@ package com.example.right2vote;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+
+import android.widget.TextView;
 
 public class PolicyStatementCollection {
 	
@@ -11,8 +15,11 @@ public class PolicyStatementCollection {
 	private Map<String, ArrayList<PolicyStatement>> policyStatementByDomain = new HashMap<String, ArrayList<PolicyStatement>>();
 	private Map<String, String> winnerByDomain = new HashMap<String, String>();
 	private Map<String, Boolean> doneByDomain = new HashMap<String, Boolean>();
+	private Map<String, HashSet<String>> policyWinners = new HashMap<String, HashSet<String>>();
 	
 	public PolicyStatementCollection() {
+		this.policyWinners.put(PolicyStatement.HILARY, new HashSet());
+		this.policyWinners.put(PolicyStatement.CRUZ, new HashSet());
 	}
 	
 	// Add New Policy Statement
@@ -102,6 +109,40 @@ public class PolicyStatementCollection {
 		} else {
 			return true;
 		}
+	}
+	
+	// Return Winners
+	public Map<String, HashSet<String>> getPolicyWinners(){
+		this.calculateWinners();
+		return this.policyWinners;
+	}
+	
+	private void calculateWinners(){
+		Iterator<Entry<String, ArrayList<PolicyStatement>>> itr = this.policyStatementByDomain.entrySet().iterator();
+		while(itr.hasNext()) {
+			Entry<String, ArrayList<PolicyStatement>> etr = itr.next();
+			ArrayList<PolicyStatement> statements = etr.getValue();
+			String policyWinner = this.winnerFromStatements(statements);
+			String policyArea = etr.getKey();
+			this.policyWinners.get(policyWinner).add(policyArea);
+		}
+	}
+	
+	private String winnerFromStatements(ArrayList<PolicyStatement> statements ){
+		int hilary = 0;
+		int ted = 0;
+
+		for (int i=0; i < statements.size(); i++){
+			PolicyStatement statement = statements.get(i);
+			
+			if (statement.isFor() == PolicyStatement.HILARY) {
+				hilary +=1;
+			} else {
+				ted += 1;
+			}
+		}
+		
+		return ted > hilary ? PolicyStatement.CRUZ : PolicyStatement.HILARY;
 	}
 	
 	private ArrayList<PolicyStatement> getOrAddStatements(String domain) {
