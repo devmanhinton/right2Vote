@@ -25,6 +25,7 @@ public class PolicyStatementCollection {
 	public String[] policyAreas() {
 		return this.policyStatementByDomain.keySet().toArray(new String[0]);
 	}
+	
 	// Add New Policy Statement
 	public boolean addStatement(PolicyStatement statement) {
 		ArrayList<PolicyStatement> statements = this.getOrAddStatements(statement.getPolicyArea());
