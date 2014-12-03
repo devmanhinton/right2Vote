@@ -1,6 +1,9 @@
 package com.example.right2vote;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,15 +17,16 @@ import com.example.right2vote.NavigationActivity;
 import com.example.right2vote.PolicyStatementActivity;
 
 public class ShowBallotActivity extends NavigationActivity {
-	private ArrayList<PolicyStatement> statements; 
+	private PolicyStatementCollection statements;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		LinearLayout layout;
-		this.statements = PolicyStatementActivity.getStatements();
 		super.onCreate(savedInstanceState);
 	
 		setContentView(R.layout.activity_show_ballot);
+		
+		this.statements = PolicyStatementActivity.getStatementsCollection();
 
 		if (PolicyStatementActivity.isUserDoneRating()) {
 			layout = (LinearLayout) findViewById(R.id.finished);
@@ -37,20 +41,26 @@ public class ShowBallotActivity extends NavigationActivity {
 	public void setUpFinishedView(){
 		LinearLayout hiliaryBox = (LinearLayout) findViewById(R.id.hilaryBox);
 		LinearLayout cruzBox = (LinearLayout) findViewById(R.id.cruzBox);
+		Map<String, HashSet<String>> policyScoreboard = this.statements.getPolicyWinners();
+		HashSet<String> wonByHilary = policyScoreboard.get(PolicyStatement.HILARY);
+		HashSet<String> wonByCruz = policyScoreboard.get(PolicyStatement.CRUZ);
 		
-		for (int i=0; i < this.statements.size(); i++){
-			PolicyStatement statement = statements.get(i);
-			String policyArea = statement.getPolicyArea();
+		this.addPolicyAreasToLayout(hiliaryBox, wonByHilary);
+		this.addPolicyAreasToLayout(cruzBox, wonByCruz);
+		
+	}
+	
+	private void addPolicyAreasToLayout(LinearLayout layout, HashSet<String> policyAreas){
+		Iterator<String> itr = policyAreas.iterator();
+		
+		while (itr.hasNext()){
+			String policyArea = itr.next();
 			
 			TextView view = new TextView(getApplicationContext());
 			view.setText(policyArea);
 			view.setTextSize(15);
 			
-			if (statement.isFor() == PolicyStatement.HILARY) {
-				hiliaryBox.addView(view);
-			} else {
-				cruzBox.addView(view);
-			}
+			layout.addView(view);
 		}
 	}
 

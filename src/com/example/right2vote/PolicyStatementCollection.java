@@ -18,8 +18,8 @@ public class PolicyStatementCollection {
 	private Map<String, HashSet<String>> policyWinners = new HashMap<String, HashSet<String>>();
 	
 	public PolicyStatementCollection() {
-		this.policyWinners.put(PolicyStatement.HILARY, new HashSet());
-		this.policyWinners.put(PolicyStatement.CRUZ, new HashSet());
+		this.policyWinners.put(PolicyStatement.HILARY, new HashSet<String>());
+		this.policyWinners.put(PolicyStatement.CRUZ, new HashSet<String>());
 	}
 	
 	// Add New Policy Statement

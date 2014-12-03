@@ -28,8 +28,8 @@ public class PolicyStatementActivity extends NavigationActivity {
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 	}
 	
-	public static ArrayList<PolicyStatement> getStatements(){
-		return PolicyStatementActivity.statementCollection.statementsIn(PolicyStatement.FOREIGN_POLICY);
+	public static PolicyStatementCollection getStatementsCollection(){
+		return PolicyStatementActivity.statementCollection;
 	}
 	
 	public static boolean isUserDoneRating() {
