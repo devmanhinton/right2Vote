@@ -30,9 +30,11 @@
     <string name="title_activity_show_ballot">Your Ballot</string>
     <string name="title_activity_ballot">BallotActivity</string>
     <string name="title_activity_voting_logistics">Logistics</string>
+    <string name="shared">Shared! (Stubbed Out)</string>    
 
     <color name="red">#FFFFFF</color>
 
     <string name="title_activity_show_policy_areas">ShowPolicyAreasActivity</string>
+    <string name="title_activity_show_share">ShowShareActivity</string>
 
 </resources>

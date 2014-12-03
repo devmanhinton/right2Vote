@@ -41,7 +41,7 @@ public final class R {
         public static final int ted_cruz=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090018;
+        public static final int action_settings=0x7f090019;
         public static final int agree=0x7f090006;
         public static final int button1=0x7f090001;
         public static final int button2=0x7f090003;
@@ -57,14 +57,15 @@ public final class R {
         public static final int hiliaryImage=0x7f09000d;
         public static final int homeButton=0x7f090008;
         public static final int issuesButton=0x7f09000a;
-        public static final int logisticsDate=0x7f090015;
-        public static final int logisticsDateLabel=0x7f090014;
-        public static final int logisticsMap=0x7f090017;
-        public static final int logisticsMapLabel=0x7f090016;
+        public static final int logisticsDate=0x7f090016;
+        public static final int logisticsDateLabel=0x7f090015;
+        public static final int logisticsMap=0x7f090018;
+        public static final int logisticsMapLabel=0x7f090017;
         public static final int logo=0x7f090000;
         public static final int notFinished=0x7f090009;
         public static final int policyBox=0x7f090013;
         public static final int policyStatement=0x7f090005;
+        public static final int shareText=0x7f090014;
         public static final int winner=0x7f090010;
     }
     public static final class layout {
@@ -74,7 +75,8 @@ public final class R {
         public static final int activity_show_ballot=0x7f030003;
         public static final int activity_show_candidate=0x7f030004;
         public static final int activity_show_policy_areas=0x7f030005;
-        public static final int activity_voting_logistics=0x7f030006;
+        public static final int activity_show_share=0x7f030006;
+        public static final int activity_voting_logistics=0x7f030007;
     }
     public static final class menu {
         public static final int ballot=0x7f080000;
@@ -84,8 +86,9 @@ public final class R {
         public static final int show_ballot=0x7f080004;
         public static final int show_candidate=0x7f080005;
         public static final int show_policy_areas=0x7f080006;
-        public static final int show_winner=0x7f080007;
-        public static final int voting_logistics=0x7f080008;
+        public static final int show_share=0x7f080007;
+        public static final int show_winner=0x7f080008;
+        public static final int voting_logistics=0x7f080009;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -108,13 +111,15 @@ public final class R {
         public static final int logistics_map_label=0x7f050009;
         public static final int myBallot=0x7f050006;
         public static final int share=0x7f050008;
+        public static final int shared=0x7f05001d;
         public static final int still_statements=0x7f05000f;
         public static final int title_activity_ballot=0x7f05001b;
         public static final int title_activity_go_home=0x7f050017;
         public static final int title_activity_policy_statement=0x7f050016;
         public static final int title_activity_show_ballot=0x7f05001a;
         public static final int title_activity_show_candidate=0x7f050018;
-        public static final int title_activity_show_policy_areas=0x7f05001d;
+        public static final int title_activity_show_policy_areas=0x7f05001e;
+        public static final int title_activity_show_share=0x7f05001f;
         public static final int title_activity_show_winner=0x7f050019;
         public static final int title_activity_voting_logistics=0x7f05001c;
         public static final int winningCandidateTitle=0x7f050011;

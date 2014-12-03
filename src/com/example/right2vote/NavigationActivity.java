@@ -54,8 +54,14 @@ public class NavigationActivity extends Activity {
 		Intent intent = new Intent(this, ShowBallotActivity.class);
 		startActivity(intent);
 	}
+	
 	public void goToSeePolicyAreas(View view) {
 		Intent intent = new Intent(this, ShowPolicyAreasActivity.class);
+		startActivity(intent);
+	}
+	
+	public void goToShare(View view) {
+		Intent intent = new Intent(this, ShowShareActivity.class);
 		startActivity(intent);
 	}
 }

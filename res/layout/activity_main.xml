@@ -55,6 +55,7 @@ android:background="@drawable/background_image" >
 		        android:contentDescription="@string/image_desc" />
    	     	<ImageView
 		        android:id="@+id/button4"
+		        android:onClick="goToShare"
 		   	    android:layout_width="125dp"
 			    android:layout_height="125dp"
 			    android:layout_marginTop="5dp"
