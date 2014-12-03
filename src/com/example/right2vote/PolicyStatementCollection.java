@@ -115,6 +115,17 @@ public class PolicyStatementCollection {
 		}
 	}
 	
+	//Check if done in all
+	public boolean isDoneInAll(){
+		String[] policyAreas = this.policyAreas();
+		for (int i =0; i<policyAreas.length; i++){
+			if (this.doneByDomain.get(policyAreas[i]) == null){
+				return false;
+			}
+		}
+		return true;
+	}
+	
 	// Return Winners
 	public Map<String, HashSet<String>> getPolicyWinners(){
 		this.calculateWinners();

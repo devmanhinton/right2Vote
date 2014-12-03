@@ -20,7 +20,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" />
         <Button
-		    android:onClick="goToRankIssues"
+		    android:onClick="goToSeePolicyAreas"
 		    android:id="@+id/issuesButton"
 		    android:text="@string/issues_button"
 		    android:layout_marginTop="15dp"
