@@ -27,8 +27,8 @@ public class PolicyStatementActivity extends NavigationActivity {
 		return PolicyStatementActivity.statementCollection;
 	}
 	
-	public static boolean isUserDoneRating() {
-		return PolicyStatementActivity.statementCollection.isDoneInAll();
+	public static boolean isUserDoneRatingOne() {
+		return PolicyStatementActivity.statementCollection.areAnyDone();
 	}
 	
 	public PolicyStatementCollection collectionOfStatements() {

@@ -126,6 +126,17 @@ public class PolicyStatementCollection {
 		return true;
 	}
 	
+	//
+	public boolean areAnyDone(){
+		String[] policyAreas = this.policyAreas();
+		for (int i =0; i<policyAreas.length; i++){
+			if (this.doneByDomain.get(policyAreas[i]) != null){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	// Return Winners
 	public Map<String, HashSet<String>> getPolicyWinners(){
 		this.calculateWinners();

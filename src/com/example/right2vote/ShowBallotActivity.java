@@ -28,7 +28,7 @@ public class ShowBallotActivity extends NavigationActivity {
 		
 		this.statements = PolicyStatementActivity.getStatementsCollection();
 
-		if (PolicyStatementActivity.isUserDoneRating()) {
+		if (PolicyStatementActivity.isUserDoneRatingOne()) {
 			layout = (LinearLayout) findViewById(R.id.finished);
 			this.setUpFinishedView();
 		} else {	
