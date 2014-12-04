@@ -47,6 +47,7 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 			
 			ImageView image = new ImageView(this);
 			image.setImageResource(R.drawable.forward_arrow);
+			image.setAdjustViewBounds(true);
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20,30);
 			params.setMargins(0, 10, 0, 0);
 			params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
