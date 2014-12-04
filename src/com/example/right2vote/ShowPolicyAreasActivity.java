@@ -18,7 +18,7 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
         /* Initialize Policy Statements */
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should end the Cuban Embargo", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should spend more money on Education", PolicyStatement.HILARY, PolicyStatement.EDUCATION));
 		statementCollection.addStatement(new PolicyStatement("The United States should make college tution free", PolicyStatement.HILARY, PolicyStatement.EDUCATION));
@@ -38,45 +38,51 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 		setContentView(R.layout.activity_show_policy_areas);
 		
 		LinearLayout layout = (LinearLayout) findViewById(R.id.policyBox);
-
 		String[] policyAreas = this.statementCollection().policyAreas();
 		
 		for (int i=0; i<policyAreas.length; i++){
-			TextView view = new TextView(getApplicationContext());
-			RelativeLayout row = new RelativeLayout(getApplicationContext());
-			
-			ImageView image = new ImageView(this);
-			image.setImageResource(R.drawable.forward_arrow);
-			image.setAdjustViewBounds(true);
-			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20,30);
-			params.setMargins(0, 10, 0, 0);
-			params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
-			image.setLayoutParams(params);
-			
-			
 			String policyArea = policyAreas[i];
-			
-			view.setText(policyArea);
-			view.setTextSize(20);
-			view.setTextColor(Color.parseColor("#000000"));
-//			view.setClickable(true);
-			view.setPadding(0, 5, 0, 5);
-			
-			row.setTag(policyArea);
-			row.setOnClickListener(new View.OnClickListener() {
+			RelativeLayout row = this.clickableRow(policyArea);
+			TextView view = this.policyTextView(policyArea);
+			ImageView image = this.arrowImage();
 
-			@Override
-			public void onClick(View v) {
-				ShowPolicyAreasActivity.this.goToRankIssues(v, (String)v.getTag());  
-			 }
-			});
-			
 			row.addView(view);
-			row.addView(image);
-
-			
+			row.addView(image);			
 			layout.addView(row);
 		}
+	}
+	
+	private RelativeLayout clickableRow(String policyArea){
+		RelativeLayout row = new RelativeLayout(getApplicationContext());
+		row.setTag(policyArea);
+		row.setOnClickListener(new View.OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			ShowPolicyAreasActivity.this.goToRankIssues(v, (String)v.getTag());  
+		 }
+		});
+		
+		return row;
+	}
+	
+	private ImageView arrowImage(){
+		ImageView image = new ImageView(this);
+		image.setImageResource(R.drawable.forward_arrow);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20,30);
+		params.setMargins(0, 10, 0, 0);
+		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+		image.setLayoutParams(params);
+		return image;
+	}
+	
+	private TextView policyTextView(String policyArea){
+		TextView view = new TextView(getApplicationContext());
+		view.setText(policyArea);
+		view.setTextSize(20);
+		view.setTextColor(Color.parseColor("#000000"));
+		view.setPadding(0, 5, 0, 5);
+		return view;
 	}
 
 	@Override
