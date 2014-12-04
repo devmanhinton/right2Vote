@@ -15,7 +15,7 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
         /* Initialize Policy Statements */
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should end the Cuban Embargo", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
 		statementCollection.addStatement(new PolicyStatement("The United States should spend more money on Education", PolicyStatement.HILARY, PolicyStatement.EDUCATION));
 		statementCollection.addStatement(new PolicyStatement("The United States should make college tution free", PolicyStatement.HILARY, PolicyStatement.EDUCATION));

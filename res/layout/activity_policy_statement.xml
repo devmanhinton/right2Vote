@@ -8,8 +8,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.right2vote.PolicyStatementActivity" >
-    
-    <LinearLayout android:layout_weight="3.0"
+<!--     <LinearLayout android:layout_weight=".5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+    	android:layout_height="0dp" >
+		<ImageView
+			android:id="@+id/back"
+			android:onClick="goHome"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_marginTop="18dp"
+			android:layout_marginLeft="6dp"
+			android:src="@drawable/back_arrow"
+			android:adjustViewBounds="true"
+			android:contentDescription="@string/image_desc" />
+    </LinearLayout>  -->
+    <LinearLayout android:layout_weight="3"
         android:orientation="vertical"
         android:layout_width="match_parent"
     	android:layout_height="0dp" >
@@ -20,35 +34,41 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="match_parent"/>
 	</LinearLayout>
-        
-    <LinearLayout android:layout_weight="1.0"
-        android:orientation="vertical"
+    <LinearLayout android:layout_weight="1"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
     	android:layout_height="0dp" >
-	    
-	    <LinearLayout
-			android:orientation="horizontal"
-			android:layout_width="match_parent" 
-			android:layout_height="wrap_content">
-		<Button
-			 android:onClick="nextPolicyStatementOrFinish"
-			 android:id="@+id/agree"
-			 android:text="@string/agree" 
-			 android:layout_height="wrap_content"
-			 android:layout_width="wrap_content" />   
-		<Button
-			android:onClick="nextPolicyStatementOrFinish"
+    	<ImageView
 			android:id="@+id/disagree"
-			android:text="@string/disagree" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content" /> 	  
-		</LinearLayout>
-		
+			android:onClick="nextPolicyStatementOrFinish"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:src="@drawable/xmark"
+			android:adjustViewBounds="true"
+			android:contentDescription="@string/image_desc" /> 			 
+    	<ImageView
+			android:id="@+id/agree"
+			android:onClick="nextPolicyStatementOrFinish"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:src="@drawable/check_mark"
+			android:layout_marginLeft="187dp"
+			android:adjustViewBounds="true"
+			android:contentDescription="@string/image_desc" />
+  			  
+    </LinearLayout>
 	    <Button
 		    android:onClick="goHome"
 		    android:id="@+id/homeButton"
 		    android:text="@string/home_button"
 		    android:layout_height="wrap_content"
 		    android:layout_width="wrap_content" />   
-    </LinearLayout>
+<!--    		<ImageView
+		android:id="@+id/back"
+		android:onClick="goHome"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:src="@drawable/back_arrow"
+		android:adjustViewBounds="true"
+		android:contentDescription="@string/image_desc" / -->>  
 </LinearLayout>
