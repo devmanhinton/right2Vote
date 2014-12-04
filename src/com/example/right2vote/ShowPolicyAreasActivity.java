@@ -1,10 +1,13 @@
 package com.example.right2vote;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.right2vote.NavigationActivity;
 
@@ -35,17 +38,31 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 		setContentView(R.layout.activity_show_policy_areas);
 		
 		LinearLayout layout = (LinearLayout) findViewById(R.id.policyBox);
+
 		String[] policyAreas = this.statementCollection().policyAreas();
 		
 		for (int i=0; i<policyAreas.length; i++){
 			TextView view = new TextView(getApplicationContext());
+			RelativeLayout row = new RelativeLayout(getApplicationContext());
+			
+			ImageView image = new ImageView(this);
+			image.setImageResource(R.drawable.forward_arrow);
+			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20,30);
+			params.setMargins(0, 10, 0, 0);
+			params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+			image.setLayoutParams(params);
+			
+			
 			String policyArea = policyAreas[i];
 			
 			view.setText(policyArea);
-			view.setTextSize(15);
-			view.setClickable(true);
-			view.setTag(policyArea);
-			view.setOnClickListener(new View.OnClickListener() {
+			view.setTextSize(20);
+			view.setTextColor(Color.parseColor("#000000"));
+//			view.setClickable(true);
+			view.setPadding(0, 5, 0, 5);
+			
+			row.setTag(policyArea);
+			row.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -53,12 +70,12 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 			 }
 			});
 			
-			layout.addView(view);
+			row.addView(view);
+			row.addView(image);
+
+			
+			layout.addView(row);
 		}
-	}
-	
-	public void test(){
-		
 	}
 
 	@Override
