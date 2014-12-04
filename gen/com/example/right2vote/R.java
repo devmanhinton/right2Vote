@@ -25,14 +25,14 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int background_image=0x7f020000;
-        public static final int border=0x7f020001;
-        public static final int button_1=0x7f020002;
-        public static final int button_2=0x7f020003;
-        public static final int button_3=0x7f020004;
-        public static final int button_4=0x7f020005;
-        public static final int check_mark=0x7f020006;
-        public static final int f_arrow=0x7f020007;
+        public static final int back_arrow=0x7f020000;
+        public static final int background_image=0x7f020001;
+        public static final int border=0x7f020002;
+        public static final int button_1=0x7f020003;
+        public static final int button_2=0x7f020004;
+        public static final int button_3=0x7f020005;
+        public static final int button_4=0x7f020006;
+        public static final int check_mark=0x7f020007;
         public static final int forward_arrow=0x7f020008;
         public static final int hiliary_clinton=0x7f020009;
         public static final int ic_launcher=0x7f02000a;
