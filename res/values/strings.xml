@@ -30,7 +30,7 @@
     <string name="title_activity_show_ballot">Your Ballot</string>
     <string name="title_activity_ballot">Your Ballot</string>
     <string name="title_activity_voting_logistics">Logistics</string>
-    <string name="shared">Shared! (Stubbed Out)</string>    
+    <string name="shared">Share to Facebook or Twitter</string>    
 
     <color name="red">#FFFFFF</color>
 
