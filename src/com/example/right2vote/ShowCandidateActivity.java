@@ -19,10 +19,10 @@ public class ShowCandidateActivity extends NavigationActivity {
 	private static int CRUZ_INDEX = 1; 
 	private static HashMap <String, String[]> candidateDescription = new HashMap<String, String[]>();
 	
-	static {
-		candidateDescription.put(PolicyStatement.ENVIRONMENT, new String[]{"Hilary Env", "Cruz Env"});
-		candidateDescription.put(PolicyStatement.FISCAL_POLICY, new String[]{"Hilary fis", "Cruz fis"});
-		candidateDescription.put(PolicyStatement.FOREIGN_POLICY, new String[]{"Hilary foreign", "Cruz foreign"});
+	static {		
+		candidateDescription.put(PolicyStatement.ENVIRONMENT, new String[]{"Hilary Env", "Ted Cruz supports expanded drilling and opposes cap-and-trade legislation and EPA regulation of greenhouse gases. Ted Cruz supports expanded drilling and opposes cap-and-trade legislation and EPA regulation of greenhouse gases. Cruz challenged the moratorium on offshore drilling in the wake of the BP oilspill. Cruz supports exploring known energy reserves to reduce the country's dependence on foreign oil as an energy source."});
+		candidateDescription.put(PolicyStatement.FISCAL_POLICY, new String[]{"Hilary fis", "Ted Cruz supports a balanced budget amendment and advocates for markets free of government regulation. He advocates for limiting federal spending growth to per-capita inflation rate."});
+		candidateDescription.put(PolicyStatement.FOREIGN_POLICY, new String[]{"Hilary foreign", "Ted Cruz is a proponent of the growth of our military forces. Cruz considers himself to be 'somewhere in between those two poles,' of foreign policy extremes. He is pro-Israel."});
 	}
 
 	@Override

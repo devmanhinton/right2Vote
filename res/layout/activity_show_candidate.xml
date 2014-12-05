@@ -37,12 +37,19 @@
 			android:layout_width="200dp"
 			android:layout_height="200dp"
 			android:layout_marginBottom="10dp"
-			android:contentDescription="@string/image_desc" />   
-	    <TextView
-	        android:id="@+id/hilaryText"
-	        android:text="@string/hilaryChosenText"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"/>      
+			android:contentDescription="@string/image_desc" />  
+			android:contentDescription="@string/image_desc" />
+		<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    >			 
+		    <TextView
+		        android:id="@+id/hilaryText"
+		        android:textSize="20sp"
+		        android:text="@string/hilaryChosenText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+	    </ScrollView>      
     </LinearLayout>
     <LinearLayout 
         android:visibility="gone"
@@ -60,12 +67,18 @@
 			android:layout_height="200dp"
 			android:layout_marginBottom="10dp"
 			android:contentDescription="@string/image_desc" />
-	    <TextView
-	        android:id="@+id/cruzText"
-	        android:text="@string/cruzChosenText"
-	        android:gravity="center"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"/>     
+		<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    >
+		    <TextView
+		        android:id="@+id/cruzText"
+				android:textSize="20sp"
+		        android:text="@string/cruzChosenText"
+		        android:gravity="center"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+	    </ScrollView>     
     </LinearLayout>
 	<LinearLayout 
 	    android:orientation="horizontal" 
