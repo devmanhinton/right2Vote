@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,55 +7,63 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:id="@+id/root"
+    android:id="@+id/linear_root"
     tools:context="com.example.right2vote.VotingLogisticsActivity" >
-    <TextView
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:id="@+id/logisticsDateLabel"
-	    android:text="@string/logistics_date_label"
-	    android:textSize="24sp"
-	    android:textColor="#000000"
-	    android:textIsSelectable="true" />
-    <TextView
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:paddingLeft="15dp"
-	    android:id="@+id/logisticsDate"
-	    android:text="@string/logistics_date"
-	    android:textSize="18sp"
-	    android:textStyle="bold"
-	    android:textColor="#000000"
-	    android:textIsSelectable="true"
-	    android:layout_below="@id/logisticsDateLabel" />
-   	<TextView
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	   	android:layout_marginTop="20dp"
-	    android:id="@+id/logisticsMapLabel"
-	    android:text="@string/logistics_map_label"
-	    android:textSize="24sp"
-	    android:textColor="#000000"
-	    android:textIsSelectable="true"
-	    android:paddingBottom="10dp"
-	    android:layout_below="@id/logisticsDate" />
-    <ImageView
-	    android:paddingLeft="15dp"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:id="@+id/logisticsMap"
-	    android:src="@drawable/my_voting_location"
-		android:contentDescription="@string/image_desc"
-		android:layout_below="@id/logisticsMapLabel"
-		android:paddingBottom="10dp" />
-	<ImageView
-		android:id="@+id/back"
-		android:onClick="goHome"
-		android:layout_width="30dp"
-		android:layout_height="20dp"
-	    android:layout_marginTop="50dp"
-		android:src="@drawable/back_arrow"
-		android:adjustViewBounds="true"
-		android:layout_below="@id/logisticsMap" 
-		android:contentDescription="@string/image_desc" />
-</RelativeLayout>
+	<LinearLayout 
+		android:layout_weight="5.0"
+		android:layout_height="0dp" 
+		android:layout_width="fill_parent"
+		android:orientation="vertical" >
+	    <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/logisticsDateLabel"
+		    android:text="@string/logistics_date_label"
+		    android:textSize="24sp"
+		    android:textColor="#000000"
+		    android:textIsSelectable="true" />
+	    <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="15dp"
+		    android:id="@+id/logisticsDate"
+		    android:text="@string/logistics_date"
+		    android:textSize="18sp"
+		    android:textStyle="bold"
+		    android:textColor="#000000"
+		    android:textIsSelectable="true" />
+	   	<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		   	android:layout_marginTop="20dp"
+		    android:id="@+id/logisticsMapLabel"
+		    android:text="@string/logistics_map_label"
+		    android:textSize="24sp"
+		    android:textColor="#000000"
+		    android:textIsSelectable="true"
+		    android:paddingBottom="10dp" />
+	    <ImageView
+		    android:paddingLeft="15dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/logisticsMap"
+		    android:src="@drawable/my_voting_location"
+			android:contentDescription="@string/image_desc" />
+    </LinearLayout>
+	<LinearLayout 
+	    android:orientation="horizontal" 
+	    android:layout_weight="1.0"
+	    android:layout_height="0dp" 
+	    android:layout_width="fill_parent" 
+	    android:baselineAligned="false">
+	 	<ImageView
+			android:id="@+id/back"
+			android:onClick="goHome"
+			android:layout_width="30dp"
+			android:layout_height="20dp"
+			android:layout_marginTop="11dp"
+			android:src="@drawable/back_arrow"
+			android:adjustViewBounds="true"
+			android:contentDescription="@string/image_desc" /> 
+	 </LinearLayout> 
+</LinearLayout>
