@@ -25,6 +25,7 @@
 	    <TextView
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
+		    android:paddingTop="3dp"
 		    android:paddingLeft="15dp"
 		    android:id="@+id/logisticsDate"
 		    android:text="@string/logistics_date"
@@ -35,17 +36,19 @@
 	   	<TextView
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		   	android:layout_marginTop="20dp"
+		   	android:layout_marginTop="10dp"
 		    android:id="@+id/logisticsMapLabel"
 		    android:text="@string/logistics_map_label"
 		    android:textSize="24sp"
 		    android:textColor="#000000"
 		    android:textIsSelectable="true"
-		    android:paddingBottom="10dp" />
+		    android:paddingBottom="0dp" />
 	    <ImageView
 		    android:paddingLeft="15dp"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
+		    android:paddingBottom="17dp"
+		    android:layout_width="300dp"
+		    android:layout_height="300dp"
+   			android:adjustViewBounds="true"
 		    android:id="@+id/logisticsMap"
 		    android:src="@drawable/my_voting_location"
 			android:contentDescription="@string/image_desc" />
