@@ -12,11 +12,10 @@ public class PolicyStatement {
 	
 	public final static String HILARY = "Hilary Clinton";
 	public final static String CRUZ = "Ted Cruz";
+	
 	public final static String FOREIGN_POLICY = "Foreign Policy";
-	public final static String DOMESTIC_POLCIY = "Domestic Policy";
-	public final static String NATIONAL_SECURITY = "National Security";
-	public final static String THE_ENVIRONMENT = "The Environment";
-	public final static String EDUCATION = "Education";
+	public final static String FISCAL_POLICY= "Fiscal Policy";
+	public final static String ENVIRONMENT = "The Environment";
 	
 	public PolicyStatement(String statement, String candidate, String policyArea) {
 		this.statement = statement;

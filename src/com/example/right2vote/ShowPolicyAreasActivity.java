@@ -13,16 +13,21 @@ import com.example.right2vote.NavigationActivity;
 
 public class ShowPolicyAreasActivity extends NavigationActivity {
 	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
-	private RelativeLayout[] listeners = new RelativeLayout[2]; 
+	private RelativeLayout[] listeners = new RelativeLayout[3]; 
 	
 	static {
         /* Initialize Policy Statements */
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on reducing defense spending", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on helping Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on leaving Iraq", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should focus on discovering terrorists", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
-		statementCollection.addStatement(new PolicyStatement("The United States should spend more money on Education", PolicyStatement.HILARY, PolicyStatement.EDUCATION));
-		statementCollection.addStatement(new PolicyStatement("The United States should make college tution free", PolicyStatement.HILARY, PolicyStatement.EDUCATION));
+		statementCollection.addStatement(new PolicyStatement("Drones are an effective an ethical foreign policy tool", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States should maintain strong ties with Israel", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		statementCollection.addStatement(new PolicyStatement("The United States could prioritize broadening its relationship with China", PolicyStatement.HILARY, PolicyStatement.FOREIGN_POLICY));
+		
+		statementCollection.addStatement(new PolicyStatement("Fracking should be banned", PolicyStatement.HILARY, PolicyStatement.ENVIRONMENT));
+		statementCollection.addStatement(new PolicyStatement("The government should implement cap & trade policies to curb carbon emissions", PolicyStatement.HILARY, PolicyStatement.ENVIRONMENT));
+		statementCollection.addStatement(new PolicyStatement("Protecting endangered species is important", PolicyStatement.HILARY, PolicyStatement.ENVIRONMENT));
+		
+		statementCollection.addStatement(new PolicyStatement("The wealthiest in society should be taxed significantly more heavily than others", PolicyStatement.HILARY, PolicyStatement.FISCAL_POLICY));
+		statementCollection.addStatement(new PolicyStatement("Free markets regulate themselves and the government should intervene only minimally", PolicyStatement.CRUZ, PolicyStatement.FISCAL_POLICY));
+		statementCollection.addStatement(new PolicyStatement("A balanced budget amendment would stabilize the economy", PolicyStatement.CRUZ, PolicyStatement.FISCAL_POLICY));
 	}
 	
 	public static PolicyStatementCollection getStatementCollection() {
