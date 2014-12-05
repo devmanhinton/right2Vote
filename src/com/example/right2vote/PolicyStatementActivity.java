@@ -51,7 +51,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	
 	private void updateToCurrentStatement(){
 		TextView textView = (TextView) findViewById(R.id.policyStatement);
-		textView.setTextSize(15);
+		textView.setTextSize(20);
 		textView.setText(this.currentStatement.getStatement());		
 	}
 
