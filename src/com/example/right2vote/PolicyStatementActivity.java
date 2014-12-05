@@ -94,6 +94,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	public void calculateWinnerAndShow(View view){
 		Intent intent = new Intent(getApplicationContext(), ShowCandidateActivity.class);
 		intent.putExtra("winner", this.winner());
+		intent.putExtra("policy area", this.policyArea);
 		this.collectionOfStatements().recordDoneIn(this.policyArea);
 		this.finishActivity();
 		startActivity(intent);
