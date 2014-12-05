@@ -17,8 +17,8 @@ public class NavigationActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_go_home);
 	}
 
 	@Override
@@ -84,38 +84,22 @@ public class NavigationActivity extends Activity {
 	}
 	
 	public void clearImages(){
-		
-		/* For the back button */
-		
-		
-		/* From PolicyStatementActivity */
-		LinearLayout box = (LinearLayout) findViewById(R.id.box);
-		if (box != null) {
-			box.removeAllViews(); 
-		} 
-		
-		/* From ShowCandidateActivity & ShowBallotActivity */
-		box = (LinearLayout) findViewById(R.id.hilaryBox);
-		if (box != null) {
-			box.removeAllViews(); 
-		}
-		
-		box = (LinearLayout) findViewById(R.id.cruzBox);
-		if (box != null) {
-			box.removeAllViews(); 
-		}	
-		
-		/* From VotingLogistiscActivity  */
 		RelativeLayout _box = (RelativeLayout) findViewById(R.id.root);
 		if (_box != null) {
 			_box.removeAllViews(); 
-		}						
+		}		
 		
+		LinearLayout box = (LinearLayout) findViewById(R.id.linear_root);
+		if (box != null) {
+			box.removeAllViews(); 
+		}											
 	}
 	
 	protected void finishActivity(){
-		this.clearImages();
+
 		this.finish();
+		this.clearImages();
+		setContentView(R.layout.activity_progress_spinner);
 		System.gc();
 		overridePendingTransition(0,0);		
 	}
