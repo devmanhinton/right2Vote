@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class NavigationActivity extends Activity {
 
@@ -35,45 +41,82 @@ public class NavigationActivity extends Activity {
 	}
 	
 	public void goHome(View view) {
-		Intent intent = new Intent(this, MainActivity.class);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 		startActivity(intent);    	
 	}
 	
 	public void goToVotingLogistics(View view) {
-		Intent intent = new Intent(this, VotingLogisticsActivity.class);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), VotingLogisticsActivity.class);
 		startActivity(intent);
 	}
 	
 	public void goToRankIssues(View view, String policyArea) {
-		Intent intent = new Intent(this, PolicyStatementActivity.class);
-		intent.putExtra("policyArea", policyArea);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), PolicyStatementActivity.class);
+		intent.putExtra("policyArea", policyArea);
 		startActivity(intent);
 	}
 	
 	public void goToBallot(View view) {
-		Intent intent = new Intent(this, ShowBallotActivity.class);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), ShowBallotActivity.class);
 		startActivity(intent);
 	}
 	
 	public void goToSeePolicyAreas(View view) {
-		Intent intent = new Intent(this, ShowPolicyAreasActivity.class);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), ShowPolicyAreasActivity.class);
 		startActivity(intent);
 	}
 	
 	public void goToShare(View view) {
-		Intent intent = new Intent(this, ShowShareActivity.class);
 		this.finishActivity();
+		
+		Intent intent = new Intent(getApplicationContext(), ShowShareActivity.class);
 		startActivity(intent);
 	}
 	
+	public void clearImages(){
+		
+		/* For the back button */
+		
+		
+		/* From PolicyStatementActivity */
+		LinearLayout box = (LinearLayout) findViewById(R.id.box);
+		if (box != null) {
+			box.removeAllViews(); 
+		} 
+		
+		/* From ShowCandidateActivity & ShowBallotActivity */
+		box = (LinearLayout) findViewById(R.id.hilaryBox);
+		if (box != null) {
+			box.removeAllViews(); 
+		}
+		
+		box = (LinearLayout) findViewById(R.id.cruzBox);
+		if (box != null) {
+			box.removeAllViews(); 
+		}	
+		
+		/* From VotingLogistiscActivity  */
+		RelativeLayout _box = (RelativeLayout) findViewById(R.id.root);
+		if (_box != null) {
+			_box.removeAllViews(); 
+		}						
+		
+	}
+	
 	protected void finishActivity(){
-		System.gc();
+		this.clearImages();
 		this.finish();
-		overridePendingTransition(0, 0);		
+		System.gc();
+		overridePendingTransition(0,0);		
 	}
 }

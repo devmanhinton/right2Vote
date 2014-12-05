@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.right2vote.PolicyStatement;
 
@@ -45,6 +46,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 		this.policyArea = extras.getString("policyArea");
 		this.currentStatement = collectionOfStatements().nextStatementIn(this.policyArea);
 		this.updateToCurrentStatement();
+
 	}
 	
 	private void updateToCurrentStatement(){
@@ -58,7 +60,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.policy_statement, menu);
 		return true;
-	}
+	}	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -90,7 +92,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 	}
 
 	public void calculateWinnerAndShow(View view){
-		Intent intent = new Intent(this, ShowCandidateActivity.class);
+		Intent intent = new Intent(getApplicationContext(), ShowCandidateActivity.class);
 		intent.putExtra("winner", this.winner());
 		this.collectionOfStatements().recordDoneIn(this.policyArea);
 		this.finishActivity();
