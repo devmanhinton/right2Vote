@@ -48,8 +48,14 @@ public class ShowCandidateActivity extends NavigationActivity {
 			index = ShowCandidateActivity.CRUZ_INDEX;
 		}
 		
+		this.showWinnerTitle(winner, policy_area);
 		textBox.setText(ShowCandidateActivity.candidateDescription.get(policy_area)[index]);
 		layout.setVisibility(View.VISIBLE);
+	}
+	
+	public void showWinnerTitle(String winner, String policy_area){
+		TextView view = (TextView) findViewById(R.id.winner);
+		view.setText(winner + "'s " + policy_area);
 	}
 
 	@Override

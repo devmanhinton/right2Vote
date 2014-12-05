@@ -14,11 +14,11 @@
 	    android:layout_weight=".5"
 	    android:layout_height="0dp" 
 	    android:layout_width="fill_parent" 
-	    android:baselineAligned="false">       
+	    android:baselineAligned="false">   
 	    <TextView
 	        android:id="@+id/winner"
 	        android:text="@string/winningCandidateTitle"
-	        android:textSize="20sp"
+	        android:textSize="24sp"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" />
     </LinearLayout> 
@@ -74,7 +74,6 @@
 		        android:id="@+id/cruzText"
 				android:textSize="20sp"
 		        android:text="@string/cruzChosenText"
-		        android:gravity="center"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"/>
 	    </ScrollView>     
