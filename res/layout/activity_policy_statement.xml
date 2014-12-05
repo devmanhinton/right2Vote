@@ -62,10 +62,18 @@
 			android:adjustViewBounds="true"
 			android:contentDescription="@string/image_desc" />  						  
     </LinearLayout>
-    <Button
-	    android:onClick="goHome"
-	    android:id="@+id/homeButton"
-	    android:text="@string/home_button"
-	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content" />  
+    <View
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" />
+<!-- 	<ImageView
+		android:id="@+id/back"
+		android:onClick="goHome"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginTop="18dp"
+		android:layout_marginLeft="6dp"
+		android:src="@drawable/back_arrow"
+		android:adjustViewBounds="true"
+		android:contentDescription="@string/image_desc" />  -->
 </LinearLayout>

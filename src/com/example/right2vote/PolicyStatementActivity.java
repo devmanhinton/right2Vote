@@ -37,6 +37,7 @@ public class PolicyStatementActivity extends NavigationActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		System.out.println("CREATED!!DEVOn");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_policy_statement);
 		
@@ -88,11 +89,13 @@ public class PolicyStatementActivity extends NavigationActivity {
     		this.updateToCurrentStatement();
     	}
 	}
-	
+
 	public void calculateWinnerAndShow(View view){
 		Intent intent = new Intent(this, ShowCandidateActivity.class);
 		intent.putExtra("winner", this.winner());
 		this.recordDone();
+		System.gc();
+		this.finish();
 		startActivity(intent);
 	}
 	

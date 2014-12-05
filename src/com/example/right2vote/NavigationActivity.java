@@ -36,32 +36,43 @@ public class NavigationActivity extends Activity {
 	
 	public void goHome(View view) {
 		Intent intent = new Intent(this, MainActivity.class);
+		System.gc();
+		this.finish();
 		startActivity(intent);    	
 	}
 	
 	public void goToVotingLogistics(View view) {
 		Intent intent = new Intent(this, VotingLogisticsActivity.class);
+		System.gc();
+		this.finish();
 		startActivity(intent);
 	}
 	
 	public void goToRankIssues(View view, String policyArea) {
 		Intent intent = new Intent(this, PolicyStatementActivity.class);
 		intent.putExtra("policyArea", policyArea);
+		System.gc();
+		this.finish();
 		startActivity(intent);
 	}
 	
 	public void goToBallot(View view) {
 		Intent intent = new Intent(this, ShowBallotActivity.class);
+		System.gc();
+		this.finish();
 		startActivity(intent);
 	}
 	
 	public void goToSeePolicyAreas(View view) {
 		Intent intent = new Intent(this, ShowPolicyAreasActivity.class);
+		System.gc();
+		this.finish();
 		startActivity(intent);
 	}
 	
 	public void goToShare(View view) {
 		Intent intent = new Intent(this, ShowShareActivity.class);
+		this.finish();
 		startActivity(intent);
 	}
 }

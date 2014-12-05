@@ -13,6 +13,7 @@ import com.example.right2vote.NavigationActivity;
 
 public class ShowPolicyAreasActivity extends NavigationActivity {
 	private static PolicyStatementCollection statementCollection = new PolicyStatementCollection();
+	private RelativeLayout[] listeners = new RelativeLayout[2]; 
 	
 	static {
         /* Initialize Policy Statements */
@@ -42,28 +43,37 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 		
 		for (int i=0; i<policyAreas.length; i++){
 			String policyArea = policyAreas[i];
-			RelativeLayout row = this.clickableRow(policyArea);
+			RelativeLayout row = this.clickableRow(policyArea, i);
+			
 			TextView view = this.policyTextView(policyArea);
 			ImageView image = this.arrowImage();
-
 			row.addView(view);
 			row.addView(image);			
 			layout.addView(row);
 		}
 	}
 	
-	private RelativeLayout clickableRow(String policyArea){
+	private RelativeLayout clickableRow(String policyArea, int index){
 		RelativeLayout row = new RelativeLayout(getApplicationContext());
 		row.setTag(policyArea);
 		row.setOnClickListener(new View.OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
+			ShowPolicyAreasActivity.this.cleanListener();
 			ShowPolicyAreasActivity.this.goToRankIssues(v, (String)v.getTag());  
 		 }
 		});
 		
+		this.listeners[index] = row;
+		
 		return row;
+	}
+	
+	public void cleanListener(){
+		this.listeners[0].setOnClickListener(null);
+		this.listeners[1].setOnClickListener(null);
+		
 	}
 	
 	private ImageView arrowImage(){
