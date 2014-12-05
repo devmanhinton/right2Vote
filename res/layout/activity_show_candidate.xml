@@ -73,11 +73,15 @@
 	    android:layout_height="0dp" 
 	    android:layout_width="fill_parent" 
 	    android:baselineAligned="false">    
-	    <Button
-		    android:onClick="goHome"
-		    android:id="@+id/homeButton"
-		    android:text="@string/home_button"
-		    android:layout_height="wrap_content"
-		    android:layout_width="wrap_content" />
+	 	<ImageView
+			android:id="@+id/back"
+			android:onClick="goHome"
+			android:layout_width="40dp"
+			android:layout_height="30dp"
+			android:layout_marginTop="18dp"
+			android:layout_marginLeft="6dp"
+			android:src="@drawable/house"
+			android:adjustViewBounds="true"
+			android:contentDescription="@string/image_desc" />
     </LinearLayout>   
 </LinearLayout>

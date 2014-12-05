@@ -47,12 +47,14 @@
 		android:contentDescription="@string/image_desc"
 		android:layout_below="@id/logisticsMapLabel"
 		android:paddingBottom="10dp" />
-    <Button
-	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content"
-	    android:layout_marginTop="40dp"
-	    android:id="@+id/homeButton"
-	    android:text="@string/home_button"
-	    android:layout_below="@id/logisticsMap" 
-	    android:onClick="goHome" />
+	<ImageView
+		android:id="@+id/back"
+		android:onClick="goHome"
+		android:layout_width="30dp"
+		android:layout_height="20dp"
+	    android:layout_marginTop="50dp"
+		android:src="@drawable/back_arrow"
+		android:adjustViewBounds="true"
+		android:layout_below="@id/logisticsMap" 
+		android:contentDescription="@string/image_desc" />
 </RelativeLayout>

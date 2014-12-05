@@ -35,16 +35,17 @@ public final class R {
         public static final int check_mark=0x7f020007;
         public static final int forward_arrow=0x7f020008;
         public static final int hiliary_clinton=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int logo=0x7f02000b;
-        public static final int logo_white=0x7f02000c;
-        public static final int my_voting_location=0x7f02000d;
-        public static final int poster=0x7f02000e;
-        public static final int ted_cruz=0x7f02000f;
-        public static final int xmark=0x7f020010;
+        public static final int house=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int logo=0x7f02000c;
+        public static final int logo_white=0x7f02000d;
+        public static final int my_voting_location=0x7f02000e;
+        public static final int poster=0x7f02000f;
+        public static final int ted_cruz=0x7f020010;
+        public static final int xmark=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001e;
+        public static final int action_settings=0x7f09001d;
         public static final int agree=0x7f09000a;
         public static final int back=0x7f09000b;
         public static final int box=0x7f090008;
@@ -54,27 +55,26 @@ public final class R {
         public static final int button4=0x7f090005;
         public static final int cruzBox=0x7f090012;
         public static final int cruzImage=0x7f090013;
-        public static final int cruzText=0x7f090017;
+        public static final int cruzText=0x7f090016;
         public static final int disagree=0x7f090009;
         public static final int finished=0x7f09000f;
         public static final int hilaryBox=0x7f090010;
-        public static final int hilaryText=0x7f090016;
+        public static final int hilaryText=0x7f090015;
         public static final int hiliaryImage=0x7f090011;
-        public static final int homeButton=0x7f090014;
         public static final int issuesButton=0x7f09000e;
         public static final int linear_root=0x7f090006;
-        public static final int logisticsDate=0x7f09001b;
-        public static final int logisticsDateLabel=0x7f09001a;
-        public static final int logisticsMap=0x7f09001d;
-        public static final int logisticsMapLabel=0x7f09001c;
+        public static final int logisticsDate=0x7f09001a;
+        public static final int logisticsDateLabel=0x7f090019;
+        public static final int logisticsMap=0x7f09001c;
+        public static final int logisticsMapLabel=0x7f09001b;
         public static final int logo=0x7f090001;
         public static final int notFinished=0x7f09000d;
-        public static final int policyBox=0x7f090018;
+        public static final int policyBox=0x7f090017;
         public static final int policyStatement=0x7f090007;
         public static final int progressBar1=0x7f09000c;
         public static final int root=0x7f090000;
-        public static final int shareText=0x7f090019;
-        public static final int winner=0x7f090015;
+        public static final int shareText=0x7f090018;
+        public static final int winner=0x7f090014;
     }
     public static final class layout {
         public static final int activity_go_home=0x7f030000;
