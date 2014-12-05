@@ -84,8 +84,8 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 	private ImageView arrowImage(){
 		ImageView image = new ImageView(this);
 		image.setImageResource(R.drawable.forward_arrow);
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(20,30);
-		params.setMargins(0, 10, 0, 0);
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(30,40);
+		params.setMargins(0, 15, 0, 0);
 		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
 		image.setLayoutParams(params);
 		return image;
@@ -94,7 +94,7 @@ public class ShowPolicyAreasActivity extends NavigationActivity {
 	private TextView policyTextView(String policyArea){
 		TextView view = new TextView(getApplicationContext());
 		view.setText(policyArea);
-		view.setTextSize(20);
+		view.setTextSize(30);
 		view.setTextColor(Color.parseColor("#000000"));
 		view.setPadding(0, 5, 0, 5);
 		return view;
