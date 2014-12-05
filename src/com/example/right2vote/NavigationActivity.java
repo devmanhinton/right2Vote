@@ -41,8 +41,7 @@ public class NavigationActivity extends Activity {
 	}
 	
 	public void goHome(View view) {
-		this.finishActivity();
-		
+		this.finishActivity();	
 		Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 		startActivity(intent);    	
 	}
@@ -55,16 +54,14 @@ public class NavigationActivity extends Activity {
 	}
 	
 	public void goToRankIssues(View view, String policyArea) {
-		this.finishActivity();
-		
+		this.finishActivity();		
 		Intent intent = new Intent(getApplicationContext(), PolicyStatementActivity.class);
 		intent.putExtra("policyArea", policyArea);
 		startActivity(intent);
 	}
 	
 	public void goToBallot(View view) {
-		this.finishActivity();
-		
+		this.finishActivity();		
 		Intent intent = new Intent(getApplicationContext(), ShowBallotActivity.class);
 		startActivity(intent);
 	}
@@ -77,8 +74,7 @@ public class NavigationActivity extends Activity {
 	}
 	
 	public void goToShare(View view) {
-		this.finishActivity();
-		
+		this.finishActivity();	
 		Intent intent = new Intent(getApplicationContext(), ShowShareActivity.class);
 		startActivity(intent);
 	}
@@ -96,7 +92,6 @@ public class NavigationActivity extends Activity {
 	}
 	
 	protected void finishActivity(){
-
 		this.finish();
 		this.clearImages();
 		setContentView(R.layout.activity_progress_spinner);

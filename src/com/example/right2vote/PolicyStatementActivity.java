@@ -112,6 +112,4 @@ public class PolicyStatementActivity extends NavigationActivity {
 	private void reset(){
 		this.collectionOfStatements().resetIterationIn(this.policyArea);
 	}
-
-
 }
